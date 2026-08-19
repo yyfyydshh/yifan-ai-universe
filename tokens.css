@@ -19,8 +19,11 @@
   --color-success: oklch(72% 0.1 160);
   --color-warning: oklch(72% 0.09 70);
   --color-danger: oklch(65% 0.12 32);
-  --font-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  /* Personal name is the sole display-serif role. All information headings stay sans
+     so long Chinese titles read as an editorial system rather than a poster. */
+  --font-personal-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
   --font-heading: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  --font-display: var(--font-heading);
   --font-body: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
   --font-label: "IBM Plex Mono", "Cascadia Mono", monospace;
   --space-1: 0.25rem;
@@ -45,9 +48,12 @@
   --text-4xl: 3rem;
   --text-display: clamp(4rem, 10vw, 9rem);
   --text-display-xl: clamp(3.25rem, 8vw, 7rem);
-  --text-page-title: clamp(2.75rem, 5vw, 5.25rem);
-  --text-project-title: clamp(2.35rem, 3.6vw, 4.35rem);
-  --text-section-title: clamp(1.55rem, 2.15vw, 2.15rem);
+  --text-cn-page-title: clamp(2.6rem, 4.4vw, 4.8rem);
+  --text-cn-project-title: clamp(2.25rem, 3.4vw, 4.15rem);
+  --text-cn-section-title: clamp(1.5rem, 2.05vw, 2.25rem);
+  --text-page-title: var(--text-cn-page-title);
+  --text-project-title: var(--text-cn-project-title);
+  --text-section-title: var(--text-cn-section-title);
   --text-card-title: clamp(1.2rem, 1.45vw, 1.65rem);
   --container-page: 92rem;
   --container-project: 84rem;

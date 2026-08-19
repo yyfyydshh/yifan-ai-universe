@@ -10,7 +10,7 @@ export const metadata = buildPageMetadata({
 export default function NotesPage() {
   return (
     <main className="page-shell notes-page">
-      <header className="page-intro"><p className="section-label">NOTES</p><h1>把项目里的判断写出来。</h1><p>不是成功学复盘，而是可被检验、也允许继续修正的实践判断。</p></header>
+      <header className="page-intro"><p className="section-label">NOTES</p><h1>方法与判断</h1><p>把项目里的判断写出来：可被检验，也允许继续修正的实践复盘。</p></header>
       <NotesFocus />
     </main>
   );
