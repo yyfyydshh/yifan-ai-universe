@@ -14,8 +14,8 @@ export default function CareerPage() {
     <main className="page-shell career-page">
       <header className="page-intro">
         <p className="section-label">CAREER EVOLUTION</p>
-        <h1>我不是从 Prompt 开始的。</h1>
-        <p>我从一线客户问题、系统排查和团队交付中，逐步走向 AI 场景建设。</p>
+        <h1>职业轨迹</h1>
+        <p>从一线客户问题、系统排查与团队交付，逐步走向 AI 场景建设。</p>
         <dl className="career-overview" aria-label="职业概览">
           {careerFoundation.overview.map(item => (
             <div key={item.value}>

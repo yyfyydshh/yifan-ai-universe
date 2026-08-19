@@ -53,7 +53,7 @@ export function SiteHeader() {
     <>
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="杨逸凡首页">
-          <span>YY</span><b>杨逸凡</b>
+          <span>YF</span><b>杨逸凡</b>
         </Link>
 
         <nav className="desktop-nav" aria-label="主导航">
