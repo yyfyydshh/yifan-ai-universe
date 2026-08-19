@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v22",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": { "width": 1672, "height": 941 },
+    "ultrawide": { "width": 2200, "height": 1200 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "verification_note": "Section-scoped v22 evidence: five real project routes share one continuous single-axis orbit. Homepage numbering is an independent 01-05 sequence, while project detail numbering remains unchanged. Thirty angle samples show zero planet overlap, complete content, one foreground maximum and a fixed avatar. This does not claim completion of unrelated future video work.",
+  "media_assets": [
+    {
+      "id": "yifan-avatar-v4-ambient",
+      "source_strategy": "inherited-user-approved-locked-derivative",
+      "image": "public/media/home/yifan-avatar-v4-ambient.png",
+      "status": "ready"
+    },
+    {
+      "id": "yifan-avatar-v5-reveal",
+      "source_strategy": "inherited-user-approved-locked-derivative",
+      "image": "public/media/home/yifan-avatar-v5-reveal.png",
+      "status": "ready"
+    }
+  ],
+  "references": [
+    {
+      "path": "references/locked/v22/01-home-five-project-single-orbit.png",
+      "sha256": "2079c985df127c08ac13031e9e5965f84ffe08c6feb42a9b0c8367a3db91faab"
+    },
+    {
+      "path": "public/media/home/yifan-avatar-v4-ambient.png",
+      "sha256": "6481f9006258110fdad619507381ef588b7709871f792388cfb8f3a51449dc84"
+    },
+    {
+      "path": "public/media/home/yifan-avatar-v5-reveal.png",
+      "sha256": "63c3cc927e8bf1dc05b2391f0e927758b8265016fa85f9ffdda5cd7cc11d1fb6"
+    }
+  ],
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": {
+        "path": "references/locked/v22/01-home-five-project-single-orbit.png",
+        "sha256": "2079c985df127c08ac13031e9e5965f84ffe08c6feb42a9b0c8367a3db91faab"
+      },
+      "render_contract": "docs/reference-production-plan-v22-home-five-project-single-orbit.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The home-only five-project orbit, locked avatar and reveal behavior remain isolated from the seven-project work universe."
+      },
+      "captures": {
+        "desktop": "references/qa/v22/home-desktop-reveal.png",
+        "ultrawide": "references/qa/v22/home-ultrawide-reveal.png",
+        "mobile": "references/qa/v22/home-mobile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

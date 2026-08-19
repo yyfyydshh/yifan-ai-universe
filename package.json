@@ -1,0 +1,36 @@
+{
+  "name": "yifan-ai-universe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "validate:media": "node scripts/inspect-media.mjs",
+    "verify:identity": "node scripts/verify-identity.mjs",
+    "verify:site-url": "node scripts/check-site-url.mjs",
+    "test:smoke": "playwright test tests/e2e/smoke.spec.ts",
+    "test:e2e": "pnpm build && playwright test",
+    "verify": "pnpm lint && pnpm build && pnpm validate:media && pnpm test:smoke && pnpm verify:identity",
+    "verify:publish": "pnpm verify && pnpm verify:site-url"
+  },
+  "dependencies": {
+    "lucide-react": "^1.30.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@11.16.0"
+}

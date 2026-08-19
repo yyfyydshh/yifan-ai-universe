@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v19",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": { "width": 1672, "height": 941 },
+    "ultrawide": { "width": 2200, "height": 1200 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "verification_note": "Section-scoped v19 evidence: V4 ambient identity, V5 reveal identity, four DOM project links, one normalized quaternion pose, projected continuation orbits, face-safe occlusion, bounded inertia, keyboard and mobile static fallback are verified. This manifest does not claim completion of unrelated pending site sections.",
+  "media_assets": [
+    {
+      "id": "yifan-avatar-v4-ambient",
+      "source_strategy": "user-approved-generated-derivative",
+      "image": "public/media/home/yifan-avatar-v4-ambient.png",
+      "status": "ready"
+    },
+    {
+      "id": "yifan-avatar-v5-reveal",
+      "source_strategy": "user-approved-generated-derivative",
+      "image": "public/media/home/yifan-avatar-v5-reveal.png",
+      "status": "ready"
+    }
+  ],
+  "references": [
+    {
+      "path": "references/locked/v19/01-home-idle.png",
+      "sha256": "f6ae79aeeb9ad399f7d23d8865ab7d6d960bd51547e9d72cebd7ce05fb8736de"
+    },
+    {
+      "path": "references/locked/v19/02-home-reveal.png",
+      "sha256": "ad26b85a73321d71b8098f47d6dd20e517847b4aaf20c923279f693a28af5298"
+    },
+    {
+      "path": "references/locked/v19/yifan-avatar-v4-ambient.png",
+      "sha256": "6481f9006258110fdad619507381ef588b7709871f792388cfb8f3a51449dc84"
+    },
+    {
+      "path": "references/locked/v19/yifan-avatar-v5-reveal.png",
+      "sha256": "63c3cc927e8bf1dc05b2391f0e927758b8265016fa85f9ffdda5cd7cc11d1fb6"
+    }
+  ],
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": {
+        "path": "references/locked/v19/02-home-reveal.png",
+        "sha256": "ad26b85a73321d71b8098f47d6dd20e517847b4aaf20c923279f693a28af5298"
+      },
+      "render_contract": "docs/reference-production-plan-v19-home-avatar-universe.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "V4 ambient and V5 reveal share one pose while four real project links retain one three-axis coordinate system."
+      },
+      "captures": {
+        "desktop": "references/qa/v19/home-desktop-idle.png",
+        "ultrawide": "references/qa/v19/home-ultrawide-reveal.png",
+        "mobile": "references/qa/v19/home-mobile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

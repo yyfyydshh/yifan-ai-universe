@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v15",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": { "width": 1440, "height": 900 },
+    "ultrawide": { "width": 1920, "height": 1080 },
+    "mobile": { "width": 414, "height": 896 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "verification_note": "Affected-section evidence for the user-approved four-project, three-axis homepage universe with shared 3D rotation and direction-preserving drag.",
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": {
+        "path": "references/locked/v15/01-home-four-project-three-axis.png",
+        "sha256": "e714f311a907652152bd11c407140ab8b97167a1515bceee8935d4b1c6a585db"
+      },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The homepage alone presents four flagship projects as one bounded three-axis orbital system; the full work universe retains its independent seven-project topology."
+      },
+      "captures": {
+        "desktop": "references/qa/v15/home-desktop.png",
+        "ultrawide": "references/qa/v15/home-ultrawide.png",
+        "mobile": "references/qa/v15/home-mobile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

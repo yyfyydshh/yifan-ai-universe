@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v3",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": { "width": 1440, "height": 900 },
+    "ultrawide": { "width": 1920, "height": 1080 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "not verified",
+  "verification_note": "Superseded by the user's v14 correction. The fixed capability core and project plates are historical evidence only and are no longer an accepted homepage target.",
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": {
+        "path": "references/locked/v3/01-home.png",
+        "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f"
+      },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The homepage owns a fixed capability core and three bounded project sectors; it only consumes the existing rotation, projection and input primitive."
+      },
+      "captures": {
+        "desktop": "references/qa/v13/home-desktop.png",
+        "ultrawide": "references/qa/v13/home-ultrawide.png",
+        "mobile": "references/qa/v13/home-mobile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "not verified"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v4",
+  "source_strategy_locked": true,
+  "review_scope": "affected_sections_pending",
+  "viewports": {
+    "desktop": { "width": 1440, "height": 900 },
+    "ultrawide": { "width": 1920, "height": 1080 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "not verified",
+  "verification_note": "v4 additionally locks the global-opinion workflow explainer as a code-native detail-page section, explicitly separate from the replace-later project video. The v4 section is not implemented yet and remains not verified; earlier pending v3 captures also remain not verified.",
+  "references": [
+    { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+    { "path": "references/locked/v3/02-project-universe.png", "sha256": "37d0d0c2307e8c0caa896f68aac3cc5fe469437589324b39dbb63e2a27fdd478" },
+    { "path": "references/locked/v3/03-sales-demo.png", "sha256": "d5ba0bace2a69ff67381ce239dbc72dc6a83340b1c173b8e9cda9be0fc2b2877" },
+    { "path": "references/locked/v3/04-global-opinion-xray.png", "sha256": "21b7bed72d1fc99504695886d360e95740fa5b9c78594b5ab9c7e493c0724c5a" },
+    { "path": "references/locked/v3/05-project-observatory-sales-copilot.png", "sha256": "cd1289bea24245958ab643e5b232a0f969213df7151dc7ef9b092b234e6af636" },
+    { "path": "references/locked/v4/01-global-opinion-workflow-explainer.png", "sha256": "08c5801003749398647c1327faed12e3aba39d9722b498eadf42d87fa70e1cbd" }
+  ],
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+      "render_contract": "docs/reference-production-plan-v3.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "首页专属双栏身份区与三项目三维能力球。" },
+      "captures": { "desktop": "qa/desktop/home-hero.png", "ultrawide": "qa/ultrawide/home-hero.png", "mobile": "qa/mobile/home-hero.png" },
+      "gates": { "visual_meaning": "not verified", "hierarchy": "not verified", "personal_evidence": "not verified", "composition": "not verified", "typography": "not verified", "asset_crop": "not verified", "overlap": "not verified", "responsive": "not verified", "reference_fidelity": "not verified" },
+      "status": "not verified"
+    },
+    {
+      "id": "project-universe",
+      "reference": { "path": "references/locked/v3/02-project-universe.png", "sha256": "37d0d0c2307e8c0caa896f68aac3cc5fe469437589324b39dbb63e2a27fdd478" },
+      "render_contract": "docs/reference-production-plan-v3.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "七项目三轴球面、方向继承拖动与深度排序属于作品入口专属结构。" },
+      "captures": { "desktop": "qa/desktop/project-universe.png", "ultrawide": "qa/ultrawide/project-universe.png", "mobile": "qa/mobile/project-universe.png" },
+      "gates": { "visual_meaning": "not verified", "hierarchy": "not verified", "personal_evidence": "not verified", "composition": "not verified", "typography": "not verified", "asset_crop": "not verified", "overlap": "not verified", "responsive": "not verified", "reference_fidelity": "not verified" },
+      "status": "not verified"
+    },
+    {
+      "id": "project-mast",
+      "reference": { "path": "references/locked/v3/03-sales-demo.png", "sha256": "d5ba0bace2a69ff67381ce239dbc72dc6a83340b1c173b8e9cda9be0fc2b2877" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "项目定位与元信息组成详情页专属紧凑双栏。" },
+      "captures": { "desktop": "qa/desktop/project-mast.png", "ultrawide": "qa/ultrawide/project-mast.png", "mobile": "qa/mobile/project-mast.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "sales-demo",
+      "reference": { "path": "references/locked/v3/03-sales-demo.png", "sha256": "d5ba0bace2a69ff67381ce239dbc72dc6a83340b1c173b8e9cda9be0fc2b2877" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "Sales Copilot 演示槽保留真实输入到结果的专属叙事位置。" },
+      "captures": { "desktop": "qa/desktop/sales-demo.png", "ultrawide": "qa/ultrawide/sales-demo.png", "mobile": "qa/mobile/sales-demo.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "global-observatory",
+      "reference": { "path": "references/locked/v3/04-global-opinion-xray.png", "sha256": "21b7bed72d1fc99504695886d360e95740fa5b9c78594b5ab9c7e493c0724c5a" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "shared", "shared_with": ["sales-observatory"], "reason": "两项目共享六阶段证据契约，内容与当前场景独立。", "shared_geometry": "左侧观测台、右侧六段叙事与章节 rail。", "responsive_behavior": "桌面 sticky 双栏，移动端每章静态场景。" },
+      "captures": { "desktop": "qa/desktop/global-observatory.png", "ultrawide": "qa/ultrawide/global-observatory.png", "mobile": "qa/mobile/global-observatory.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "sales-observatory",
+      "reference": { "path": "references/locked/v3/05-project-observatory-sales-copilot.png", "sha256": "cd1289bea24245958ab643e5b232a0f969213df7151dc7ef9b092b234e6af636" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "shared", "shared_with": ["global-observatory"], "reason": "两项目共享六阶段证据契约，内容与当前场景独立。", "shared_geometry": "左侧观测台、右侧六段叙事与章节 rail。", "responsive_behavior": "桌面 sticky 双栏，移动端每章静态场景。" },
+      "captures": { "desktop": "qa/desktop/sales-observatory.png", "ultrawide": "qa/ultrawide/sales-observatory.png", "mobile": "qa/mobile/sales-observatory.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "global-opinion-workflow-explainer",
+      "reference": { "path": "references/locked/v4/01-global-opinion-workflow-explainer.png", "sha256": "08c5801003749398647c1327faed12e3aba39d9722b498eadf42d87fa70e1cbd" },
+      "render_contract": "docs/reference-production-plan-v4.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "全球舆情项目的范围、只读采集、来源审计、正式报告质量门、条件分流与交付物组成专属证据链；视频是独立 replace-later 媒体槽。" },
+      "captures": { "desktop": "qa/desktop/global-opinion-workflow-explainer.png", "ultrawide": "qa/ultrawide/global-opinion-workflow-explainer.png", "mobile": "qa/mobile/global-opinion-workflow-explainer.png" },
+      "gates": { "visual_meaning": "not verified", "hierarchy": "not verified", "personal_evidence": "not verified", "composition": "not verified", "typography": "not verified", "asset_crop": "not verified", "overlap": "not verified", "responsive": "not verified", "reference_fidelity": "not verified" },
+      "status": "not verified"
+    },
+    {
+      "id": "career-trajectory",
+      "reference": { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "时间 rail 与经历证据激活是 Career 专属信息结构。" },
+      "captures": { "desktop": "qa/desktop/career-trajectory.png", "ultrawide": "qa/ultrawide/career-trajectory.png", "mobile": "qa/mobile/career-trajectory.png" },
+      "gates": { "visual_meaning": "not verified", "hierarchy": "not verified", "personal_evidence": "not verified", "composition": "not verified", "typography": "not verified", "asset_crop": "not verified", "overlap": "not verified", "responsive": "not verified", "reference_fidelity": "not verified" },
+      "status": "not verified"
+    },
+    {
+      "id": "notes-focus",
+      "reference": { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "观点信号与文章焦点联动属于思考页专属结构。" },
+      "captures": { "desktop": "qa/desktop/notes-focus.png", "ultrawide": "qa/ultrawide/notes-focus.png", "mobile": "qa/mobile/notes-focus.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "article-reader",
+      "reference": { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "阅读进度与章节信号属于长文专属结构。" },
+      "captures": { "desktop": "qa/desktop/article-reader.png", "ultrawide": "qa/ultrawide/article-reader.png", "mobile": "qa/mobile/article-reader.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "profile-hero",
+      "reference": { "path": "references/locked/v3/01-home.png", "sha256": "33655a9c6bcad4a06aca08d2bb59b8de3b9ffd47ef9b00e09e91d18c91cd5e4f" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "个人简介、联系与简历入口组成 Profile 专属身份区。" },
+      "captures": { "desktop": "qa/desktop/profile-hero.png", "ultrawide": "qa/ultrawide/profile-hero.png", "mobile": "qa/mobile/profile-hero.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    },
+    {
+      "id": "capability-system",
+      "reference": { "path": "references/locked/v3/05-project-observatory-sales-copilot.png", "sha256": "cd1289bea24245958ab643e5b232a0f969213df7151dc7ef9b092b234e6af636" },
+      "render_contract": "docs/restoration-plan.md",
+      "topology": { "kind": "section-specific", "shared_with": [], "reason": "输入到沉淀的四阶段交付链属于关于我页面专属结构。" },
+      "captures": { "desktop": "qa/desktop/capability-system.png", "ultrawide": "qa/ultrawide/capability-system.png", "mobile": "qa/mobile/capability-system.png" },
+      "gates": { "visual_meaning": "pass", "hierarchy": "pass", "personal_evidence": "pass", "composition": "pass", "typography": "pass", "asset_crop": "pass", "overlap": "pass", "responsive": "pass", "reference_fidelity": "pass" },
+      "status": "pass"
+    }
+  ]
+}

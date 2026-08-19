@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v21",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": { "width": 1672, "height": 941 },
+    "ultrawide": { "width": 2200, "height": 1200 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "verification_note": "Section-scoped v21 evidence: the user-directed single diagonal orbit replaces v20 home-only three-axis motion. Four real project links share one continuous phase; one depth value controls perspective and layer; three same-plane SVG traces form one visual orbit band; V4/V5 stay byte-identical and position-stable; all project text remains complete. This manifest does not claim completion of unrelated future video work.",
+  "media_assets": [
+    {
+      "id": "yifan-avatar-v4-ambient",
+      "source_strategy": "inherited-user-approved-locked-derivative",
+      "image": "public/media/home/yifan-avatar-v4-ambient.png",
+      "status": "ready"
+    },
+    {
+      "id": "yifan-avatar-v5-reveal",
+      "source_strategy": "inherited-user-approved-locked-derivative",
+      "image": "public/media/home/yifan-avatar-v5-reveal.png",
+      "status": "ready"
+    }
+  ],
+  "references": [
+    {
+      "path": "references/locked/v21/04-user-approved-single-orbit-reference.png",
+      "sha256": "cc5e37f055e1ec2837e0c92af2ae579b27d2d0de2a78d80f3988ab0d7b298a24"
+    },
+    {
+      "path": "public/media/home/yifan-avatar-v4-ambient.png",
+      "sha256": "6481f9006258110fdad619507381ef588b7709871f792388cfb8f3a51449dc84"
+    },
+    {
+      "path": "public/media/home/yifan-avatar-v5-reveal.png",
+      "sha256": "63c3cc927e8bf1dc05b2391f0e927758b8265016fa85f9ffdda5cd7cc11d1fb6"
+    }
+  ],
+  "sections": [
+    {
+      "id": "home-hero",
+      "reference": {
+        "path": "references/locked/v21/04-user-approved-single-orbit-reference.png",
+        "sha256": "cc5e37f055e1ec2837e0c92af2ae579b27d2d0de2a78d80f3988ab0d7b298a24"
+      },
+      "render_contract": "docs/reference-production-plan-v21-home-single-orbit.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "One code-native diagonal orbit is the only home spatial truth; three same-plane traces are visual echoes of that orbit, while the work-page sphere remains isolated."
+      },
+      "captures": {
+        "desktop": "references/qa/v21/home-desktop-reveal.png",
+        "ultrawide": "references/qa/v21/home-ultrawide-reveal.png",
+        "mobile": "references/qa/v21/home-mobile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

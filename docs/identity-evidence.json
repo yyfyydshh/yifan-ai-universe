@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "v23",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": {
+      "width": 1672,
+      "height": 941
+    },
+    "ultrawide": {
+      "width": 2200,
+      "height": 1200
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "verification_note": "v23 adopts the approved deep-space system and closes the release surface: responsive navigation, contact QR/email/phone, project mast facts, seven captioned videos, metadata/discovery, automated route and interaction regression, and exact desktop/ultrawide/mobile evidence. The homepage single-orbit portrait universe and all project facts remain unchanged.",
+  "media_assets": [
+    {
+      "id": "global-opinion-agent-demo-web-v002",
+      "source_strategy": "user-approved-final-transcoded-for-web",
+      "video": "public/videos/global-opinion/global-opinion-agent-demo-web-v002.mp4",
+      "poster": "public/videos/global-opinion-agent-demo-poster.jpg",
+      "captions": "public/captions/global-opinion-agent-demo.zh-CN.vtt",
+      "status": "ready"
+    },
+    {
+      "id": "wechat-contact-qr",
+      "source_strategy": "user-provided",
+      "image": "public/contact/wechat-qr-yang-yifan.jpg",
+      "status": "ready"
+    }
+  ],
+  "references": [
+    {
+      "path": "references/locked/v23/baseline-home-hero.png",
+      "sha256": "13b90171022197da045b0695bcf3c7a77bc1abce4de16e4f0c943cf45e3e2b61"
+    },
+    {
+      "path": "references/locked/v23/reference-home-reveal.png",
+      "sha256": "ad26b85a73321d71b8098f47d6dd20e517847b4aaf20c923279f693a28af5298"
+    },
+    {
+      "path": "references/locked/v23/baseline-work-universe.png",
+      "sha256": "f9086edeae905bc35838d23c9646c8ee88b77612f0cd3370ff730c3cb3c81839"
+    },
+    {
+      "path": "references/locked/v23/baseline-career-trajectory.png",
+      "sha256": "22761b0a54ad8bb0ae5fbec66f8621f9959ae071189858b41a2bbe35ebf7fadd"
+    },
+    {
+      "path": "references/locked/v23/baseline-notes-signal.png",
+      "sha256": "b5236d8b5b461a2f3136f19bd75692df458149149b597c53f82ee501d1e699f6"
+    },
+    {
+      "path": "references/locked/v23/baseline-article-reliability.png",
+      "sha256": "330c05b57569925f9460909221c77ff9d16f5baf1a9aa7c5b55630cc7b5e248f"
+    },
+    {
+      "path": "references/locked/v23/baseline-profile-capability-system.png",
+      "sha256": "8ce3209629845307fd8a930418ce511b6c9ab51512eed71a882c9f7e31acfe66"
+    },
+    {
+      "path": "references/locked/v23/reference-responsive-navigation.png",
+      "sha256": "99ff442da93c9a083e9a3487917c1a4ecaaf57ce0d0fd2665665eb4b0705975a"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-global-opinion.png",
+      "sha256": "986e56ab1873a96a944de02decdcb189901333782af8b536606682a1bf4b12ac"
+    },
+    {
+      "path": "references/locked/v23/reference-project-global-opinion-workbench.png",
+      "sha256": "3734d9fa07198a962b72168fcadf2f6dc0f0f1eb9e40d1fc601bf3d29717c67c"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-sales-copilot.png",
+      "sha256": "afd17c60269eedd6b8f6cbe008a186c76e70227a031af694b384dbea3fee7c7d"
+    },
+    {
+      "path": "references/locked/v23/reference-project-sales-copilot-workbench.png",
+      "sha256": "b86c77c520ca98ecf16d7717af2aee11513773c58679b622f96b72eb13e5f1ac"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-docs-site.png",
+      "sha256": "63c5f283932905bdc8b9576597f5226937c39ddfcb1d84bdf3398533adab624d"
+    },
+    {
+      "path": "references/locked/v23/reference-project-docs-site-workbench.png",
+      "sha256": "df5abfb5b3addd3f470cfa3c813741a9571bd03bba5ea0ae5d3c12389186b576"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-regulatory-risk.png",
+      "sha256": "137538afd6ec947758e58924b01f646c050b81fdc016346e2f3cc6a23959500a"
+    },
+    {
+      "path": "references/locked/v23/reference-project-regulatory-risk-workbench.png",
+      "sha256": "841c11485641c5b3c7f4eaf48f248fe6b16326b8b09d00265aaf3bb8a1617dd6"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-tender-cleaner.png",
+      "sha256": "57c3c096cf1bc0d7c70be5fe06d95418fd1fd6dbca83a8377ea093ba9e1017ac"
+    },
+    {
+      "path": "references/locked/v23/reference-project-tender-cleaner-workbench.png",
+      "sha256": "866176fe39e1494dd29f9f319a0d1b4cbe7215cd237154266910afb00c7e714f"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-hot-news-brief.png",
+      "sha256": "e367c9fe0f5ecdfe1c92beaa9df02d21266e087eca5c6bd7664e5bb86a67f9c4"
+    },
+    {
+      "path": "references/locked/v23/reference-project-hot-news-brief-workbench.png",
+      "sha256": "4da9948d440f2912108a4e9b848c081a6ea81e635e62344b6324f11ebb25fe71"
+    },
+    {
+      "path": "references/locked/v23/baseline-project-humanizer.png",
+      "sha256": "ec16d1549c09597f8c202d0377cb7652b39d2e413e5a39a4e82158fd235fccf4"
+    },
+    {
+      "path": "references/locked/v23/reference-project-humanizer-workbench.png",
+      "sha256": "bfc60598b6489178a15faf380f3f1b8ef76e66d050fd3257d1367edd647af3b3"
+    }
+  ],
+  "sections": [
+    {
+      "id": "home-idle",
+      "reference": {
+        "path": "references/locked/v23/baseline-home-hero.png",
+        "sha256": "13b90171022197da045b0695bcf3c7a77bc1abce4de16e4f0c943cf45e3e2b61"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The calm homepage state keeps the personal proposition first and lets five evenly spaced project planets carry the right-side density."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/home-idle.png",
+        "ultrawide": "references/qa/v23/ultrawide/home-idle.png",
+        "mobile": "references/qa/v23/mobile/home-idle.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-reveal",
+      "reference": {
+        "path": "references/locked/v23/reference-home-reveal.png",
+        "sha256": "ad26b85a73321d71b8098f47d6dd20e517847b4aaf20c923279f693a28af5298"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The approved portrait is a discoverable middle layer while project links, the single orbit and face-safe depth remain primary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/home-reveal.png",
+        "ultrawide": "references/qa/v23/ultrawide/home-reveal.png",
+        "mobile": "references/qa/v23/mobile/home-reveal.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "work-universe",
+      "reference": {
+        "path": "references/locked/v23/baseline-work-universe.png",
+        "sha256": "f9086edeae905bc35838d23c9646c8ee88b77612f0cd3370ff730c3cb3c81839"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "Seven semantic project planets preserve the complete portfolio topology and keyboard-accessible spatial browsing."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/work-universe.png",
+        "ultrawide": "references/qa/v23/ultrawide/work-universe.png",
+        "mobile": "references/qa/v23/mobile/work-universe.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "career-trajectory",
+      "reference": {
+        "path": "references/locked/v23/baseline-career-trajectory.png",
+        "sha256": "22761b0a54ad8bb0ae5fbec66f8621f9959ae071189858b41a2bbe35ebf7fadd"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The trajectory joins two roles with evidence-rich milestones rather than reducing the resume to decorative cards."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/career-trajectory.png",
+        "ultrawide": "references/qa/v23/ultrawide/career-trajectory.png",
+        "mobile": "references/qa/v23/mobile/career-trajectory.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "notes-signal",
+      "reference": {
+        "path": "references/locked/v23/baseline-notes-signal.png",
+        "sha256": "b5236d8b5b461a2f3136f19bd75692df458149149b597c53f82ee501d1e699f6"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The article list exposes an active viewpoint signal and reading direction without enlarging generic cards."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/notes-signal.png",
+        "ultrawide": "references/qa/v23/ultrawide/notes-signal.png",
+        "mobile": "references/qa/v23/mobile/notes-signal.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "article-reliability",
+      "reference": {
+        "path": "references/locked/v23/baseline-article-reliability.png",
+        "sha256": "330c05b57569925f9460909221c77ff9d16f5baf1a9aa7c5b55630cc7b5e248f"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The long-form article uses progress and chapter context while keeping the argument stable and readable."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/article-reliability.png",
+        "ultrawide": "references/qa/v23/ultrawide/article-reliability.png",
+        "mobile": "references/qa/v23/mobile/article-reliability.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "profile-capability-system",
+      "reference": {
+        "path": "references/locked/v23/baseline-profile-capability-system.png",
+        "sha256": "8ce3209629845307fd8a930418ce511b6c9ab51512eed71a882c9f7e31acfe66"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The profile connects input, method, quality control and reusable delivery into one capability system."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/profile-capability-system.png",
+        "ultrawide": "references/qa/v23/ultrawide/profile-capability-system.png",
+        "mobile": "references/qa/v23/mobile/profile-capability-system.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "responsive-navigation",
+      "reference": {
+        "path": "references/locked/v23/reference-responsive-navigation.png",
+        "sha256": "99ff442da93c9a083e9a3487917c1a4ecaaf57ce0d0fd2665665eb4b0705975a"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "One navigation model preserves five primary destinations, active location and the contact exit across desktop and mobile."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/responsive-navigation.png",
+        "ultrawide": "references/qa/v23/ultrawide/responsive-navigation.png",
+        "mobile": "references/qa/v23/mobile/responsive-navigation.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-global-opinion-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-global-opinion.png",
+        "sha256": "986e56ab1873a96a944de02decdcb189901333782af8b536606682a1bf4b12ac"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-global-opinion-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-global-opinion-mast.png",
+        "mobile": "references/qa/v23/mobile/project-global-opinion-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-global-opinion-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-global-opinion-workbench.png",
+        "sha256": "3734d9fa07198a962b72168fcadf2f6dc0f0f1eb9e40d1fc601bf3d29717c67c"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-global-opinion-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-global-opinion-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-global-opinion-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-sales-copilot-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-sales-copilot.png",
+        "sha256": "afd17c60269eedd6b8f6cbe008a186c76e70227a031af694b384dbea3fee7c7d"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-sales-copilot-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-sales-copilot-mast.png",
+        "mobile": "references/qa/v23/mobile/project-sales-copilot-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-sales-copilot-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-sales-copilot-workbench.png",
+        "sha256": "b86c77c520ca98ecf16d7717af2aee11513773c58679b622f96b72eb13e5f1ac"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-sales-copilot-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-sales-copilot-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-sales-copilot-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-docs-site-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-docs-site.png",
+        "sha256": "63c5f283932905bdc8b9576597f5226937c39ddfcb1d84bdf3398533adab624d"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-docs-site-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-docs-site-mast.png",
+        "mobile": "references/qa/v23/mobile/project-docs-site-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-docs-site-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-docs-site-workbench.png",
+        "sha256": "df5abfb5b3addd3f470cfa3c813741a9571bd03bba5ea0ae5d3c12389186b576"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-docs-site-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-docs-site-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-docs-site-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-regulatory-risk-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-regulatory-risk.png",
+        "sha256": "137538afd6ec947758e58924b01f646c050b81fdc016346e2f3cc6a23959500a"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-regulatory-risk-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-regulatory-risk-mast.png",
+        "mobile": "references/qa/v23/mobile/project-regulatory-risk-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-regulatory-risk-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-regulatory-risk-workbench.png",
+        "sha256": "841c11485641c5b3c7f4eaf48f248fe6b16326b8b09d00265aaf3bb8a1617dd6"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-regulatory-risk-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-regulatory-risk-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-regulatory-risk-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-tender-cleaner-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-tender-cleaner.png",
+        "sha256": "57c3c096cf1bc0d7c70be5fe06d95418fd1fd6dbca83a8377ea093ba9e1017ac"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-tender-cleaner-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-tender-cleaner-mast.png",
+        "mobile": "references/qa/v23/mobile/project-tender-cleaner-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-tender-cleaner-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-tender-cleaner-workbench.png",
+        "sha256": "866176fe39e1494dd29f9f319a0d1b4cbe7215cd237154266910afb00c7e714f"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-tender-cleaner-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-tender-cleaner-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-tender-cleaner-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-hot-news-brief-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-hot-news-brief.png",
+        "sha256": "e367c9fe0f5ecdfe1c92beaa9df02d21266e087eca5c6bd7664e5bb86a67f9c4"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-hot-news-brief-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-hot-news-brief-mast.png",
+        "mobile": "references/qa/v23/mobile/project-hot-news-brief-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-hot-news-brief-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-hot-news-brief-workbench.png",
+        "sha256": "4da9948d440f2912108a4e9b848c081a6ea81e635e62344b6324f11ebb25fe71"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-hot-news-brief-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-hot-news-brief-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-hot-news-brief-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-humanizer-mast",
+      "reference": {
+        "path": "references/locked/v23/baseline-project-humanizer.png",
+        "sha256": "ec16d1549c09597f8c202d0377cb7652b39d2e413e5a39a4e82158fd235fccf4"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project mast balances title, evidence status, external source and the input–judgment–output fact rail without fixed-height filler."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-humanizer-mast.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-humanizer-mast.png",
+        "mobile": "references/qa/v23/mobile/project-humanizer-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-humanizer-workbench",
+      "reference": {
+        "path": "references/locked/v23/reference-project-humanizer-workbench.png",
+        "sha256": "bfc60598b6489178a15faf380f3f1b8ef76e66d050fd3257d1367edd647af3b3"
+      },
+      "render_contract": "docs/reference-production-plan-v23-release-closeout.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "The project-specific workbench exposes a real state change and deeper operational evidence instead of repeating the mast summary."
+      },
+      "captures": {
+        "desktop": "references/qa/v23/desktop/project-humanizer-workbench.png",
+        "ultrawide": "references/qa/v23/ultrawide/project-humanizer-workbench.png",
+        "mobile": "references/qa/v23/mobile/project-humanizer-workbench.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-08-19T02:06:42.897Z",
+  "media": [
+    {
+      "id": "global-opinion",
+      "video": "public/videos/global-opinion/global-opinion-agent-demo-web-v002.mp4",
+      "poster": "public/videos/global-opinion-agent-demo-poster.jpg",
+      "captions": "public/captions/global-opinion-agent-demo.zh-CN.vtt",
+      "expectedDuration": 54.634,
+      "duration": 54.634,
+      "bytes": 10527627,
+      "sha256": "55209b50d38aedc1e4572785335d30ebba5bdffa60e2b079f4e5744062b76722",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": "aac",
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 8,
+        "firstCue": 0,
+        "lastCue": 54.5,
+        "sha256": "b1931f1b192cd8ce501735de0924fcb44244a89a21563f90ced3c1ac7c7d8f04"
+      }
+    },
+    {
+      "id": "sales-copilot",
+      "video": "public/videos/sales-copilot/demo-v001.mp4",
+      "poster": "public/videos/sales-copilot/poster-v001.jpg",
+      "captions": "public/captions/sales-copilot-demo.zh-CN.vtt",
+      "expectedDuration": 72,
+      "duration": 72,
+      "bytes": 7621389,
+      "sha256": "ea3864f641ed857269ba9b13a98c1ac3cbb7f4b746885078ccd7ee4f37945ada",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": "aac",
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 8,
+        "firstCue": 0,
+        "lastCue": 71.9,
+        "sha256": "3a0399fa8b1911698f7a7757175000eb4db16cd40d4d1758646bac8e2126c5f4"
+      }
+    },
+    {
+      "id": "docs-system",
+      "video": "public/videos/docs-site/demo-v001.mp4",
+      "poster": "public/videos/docs-site/poster-v001.jpg",
+      "captions": "public/captions/docs-site-demo.zh-CN.vtt",
+      "expectedDuration": 24,
+      "duration": 24,
+      "bytes": 5312560,
+      "sha256": "91ef835327f66a7ca73a7861be56c26c427f2b39426cc8622c383ebec9054a92",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": null,
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 5,
+        "firstCue": 0,
+        "lastCue": 23.9,
+        "sha256": "4892dbecdd25adee09776e8fd58722ac257f7fb86481d0e8e326a0b61dfe7dd0"
+      }
+    },
+    {
+      "id": "regulatory-risk",
+      "video": "public/videos/financial-regulatory-risk-monitor/demo-v002.mp4",
+      "poster": "public/videos/financial-regulatory-risk-monitor/poster-v002.jpg",
+      "captions": "public/captions/regulatory-risk-demo.zh-CN.vtt",
+      "expectedDuration": 78,
+      "duration": 78,
+      "bytes": 7759606,
+      "sha256": "6762a3b9d09572d10edc2213c3e1f6155fec7a50f5f89a6978c404f7e5147f6a",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": null,
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 8,
+        "firstCue": 0,
+        "lastCue": 77.9,
+        "sha256": "9ade09b174a865e245ff87f22c9be8c9dd2fd17e658eacb71bce54c2354395c3"
+      }
+    },
+    {
+      "id": "tender-cleaner",
+      "video": "public/videos/tender-cleaner-29field.mp4",
+      "poster": "public/videos/tender-cleaner-29field-poster.png",
+      "captions": "public/captions/tender-cleaner-demo.zh-CN.vtt",
+      "expectedDuration": 38,
+      "duration": 38,
+      "bytes": 3382280,
+      "sha256": "8efe19b1f6e646a1d08dfc256109948a5d5ff921d9cf117c45b47d0fabc6efc2",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": null,
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 6,
+        "firstCue": 0,
+        "lastCue": 37.9,
+        "sha256": "c4c9652d86433d12e8aa0a7d77d5e79ae2ac0a7ee06b0b4a278e8f722f68cfc2"
+      }
+    },
+    {
+      "id": "hot-news-brief",
+      "video": "public/videos/hot-news-brief/demo-v003.mp4",
+      "poster": "public/videos/hot-news-brief/poster-v003.jpg",
+      "captions": "public/captions/hot-news-brief-demo.zh-CN.vtt",
+      "expectedDuration": 42,
+      "duration": 42,
+      "bytes": 4135794,
+      "sha256": "23c38778681a164c2d06e41ff16630464207dc78f12342574c18d38b6959af45",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": null,
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 7,
+        "firstCue": 0,
+        "lastCue": 41.9,
+        "sha256": "4cd338d9d2b683ee09ae2508e22b14cc5670bc5453689c28999beb5bd4922def"
+      }
+    },
+    {
+      "id": "humanizer",
+      "video": "public/videos/humanizer-literary-demo.mp4",
+      "poster": "public/videos/humanizer-literary-demo-poster.png",
+      "captions": "public/captions/humanizer-demo.zh-CN.vtt",
+      "expectedDuration": 60,
+      "duration": 60,
+      "bytes": 2904699,
+      "sha256": "c8c0f4e9e87965524861cf23559b5f5de8dae7163ead3e539f8fb50e2323c3cb",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "resolution": "1920x1080",
+      "frameRate": "30/1",
+      "audioCodec": null,
+      "faststart": true,
+      "captionsInfo": {
+        "cueCount": 8,
+        "firstCue": 0,
+        "lastCue": 59.9,
+        "sha256": "e269067164dc9a90a5bbedc933cb2158ed71268fa6d65572e4ece1a210a1f265"
+      }
+    }
+  ]
+}
