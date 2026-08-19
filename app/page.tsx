@@ -3,7 +3,7 @@ import { ProjectUniverse } from "@/components/project-universe";
 import { SpaceField } from "@/components/space-field";
 import { MetricReveal } from "@/components/metric-reveal";
 import { metrics } from "@/lib/site-data";
-import { buildPageMetadata } from "@/lib/site-config";
+import { buildPageMetadata, publicPath } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
   title: "杨逸凡｜AI Capability Universe",
@@ -33,8 +33,8 @@ export default function Home() {
         <div className="hero-universe">
           <ProjectUniverse
             variant="home"
-            ambientAvatarSrc="/media/home/yifan-avatar-v4-ambient.png"
-            revealAvatarSrc="/media/home/yifan-avatar-v5-reveal.png"
+            ambientAvatarSrc={publicPath("/media/home/yifan-avatar-v4-ambient.png")}
+            revealAvatarSrc={publicPath("/media/home/yifan-avatar-v5-reveal.png")}
           />
         </div>
       </section>

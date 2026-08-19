@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { publicPath } from "@/lib/site-config";
 
 type NavItem = {
   href: string;
@@ -117,7 +118,7 @@ export function SiteHeader() {
           </div>
         </div>
         <figure className="contact-qr">
-          <Image src="/contact/wechat-qr-yang-yifan.jpg" alt="杨逸凡的微信二维码" width={624} height={624} priority={false} unoptimized />
+          <Image src={publicPath("/contact/wechat-qr-yang-yifan.jpg")} alt="杨逸凡的微信二维码" width={624} height={624} priority={false} unoptimized />
           <figcaption>微信扫码添加</figcaption>
         </figure>
       </dialog>
