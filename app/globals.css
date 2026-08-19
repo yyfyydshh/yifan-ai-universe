@@ -35,6 +35,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); o
 .mobile-nav-trigger,
 .mobile-nav-panel { display: none; }
 .contact-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
   width: min(54rem, calc(100% - 2rem));
   max-height: min(46rem, calc(100svh - 2rem));
   grid-template-columns: minmax(0, 1.08fr) minmax(15rem, 0.72fr);
@@ -174,6 +178,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); o
   .notes-list > a { grid-template-columns: 2.5rem 1fr; gap: var(--space-3); }.notes-list > a > b { grid-column: 2; }.notes-list h2 { font-size: var(--text-xl); }
   .article-page { padding-inline: var(--space-4); }.article-body p, .article-body li { font-size: 1rem; line-height: 1.9; }
   .profile-hero { grid-template-columns: 1fr; gap: var(--space-8); }.profile-hero h1 { font-size: clamp(4.5rem, 24vw, 7rem); }.capability-stack article { grid-template-columns: 2.5rem 1fr; }.capability-stack article p { grid-column: 2; }.profile-record { grid-template-columns: 1fr; }
+  .contact-dialog { inset: 1rem; width: auto; max-height: calc(100svh - 2rem); transform: none; }
   .contact-dialog[open] { grid-template-columns: 1fr; overflow-y: auto; }
   .contact-dialog-copy { padding-top: var(--space-8); }
   .contact-qr { width: min(21rem, 100%); justify-self: center; }

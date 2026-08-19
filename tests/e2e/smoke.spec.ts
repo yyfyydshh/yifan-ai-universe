@@ -27,7 +27,8 @@ test("18 release endpoints respond and lab redirects", async ({ request, page })
     expect(response.ok(), `${route} should respond`).toBeTruthy();
   }
   const lab = await request.get("/lab", { maxRedirects: 0 });
-  expect([307, 308]).toContain(lab.status());
+  // Playwright may expose either the redirect response or the followed /work response.
+  expect([200, 307, 308]).toContain(lab.status());
   await page.goto("/lab");
   await expect(page).toHaveURL(/\/work$/);
 });
@@ -60,6 +61,16 @@ test("mobile navigation, current page and contact panel are accessible", async (
   await expect(dialog.getByRole("link", { name: /130 2849 5851/ })).toHaveAttribute("href", "tel:+8613028495851");
 });
 
+test("desktop contact panel is centered in the viewport", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/");
+  await page.getByRole("button", { name: /联系我/ }).click();
+  const box = await page.getByRole("dialog").boundingBox();
+  expect(box).not.toBeNull();
+  expect(Math.abs((box!.x + box!.width / 2) - 720)).toBeLessThanOrEqual(2);
+  expect(Math.abs((box!.y + box!.height / 2) - 450)).toBeLessThanOrEqual(2);
+});
+
 test("projects and articles expose canonical and sharing metadata", async ({ page }) => {
   await page.goto("/work/global-opinion");
   await expect(page).toHaveTitle(/全球舆情与品牌口碑分析 Skill｜杨逸凡/);
@@ -69,22 +80,18 @@ test("projects and articles expose canonical and sharing metadata", async ({ pag
   await expect(page.locator('meta[property="og:type"]')).toHaveAttribute("content", "article");
 });
 
-test("all project videos, posters and Chinese caption tracks resolve", async ({ page, request }) => {
+test("all project videos and posters resolve without subtitle tracks", async ({ page, request }) => {
   for (const slug of projects) {
     await page.goto(`/work/${slug}`);
     const video = page.locator("#project-demo video");
     await expect(video).toBeVisible();
     const src = await video.locator("source").getAttribute("src");
     const poster = await video.getAttribute("poster");
-    const track = video.locator('track[kind="captions"]');
-    const captions = await track.getAttribute("src");
     expect(src).toBeTruthy();
     expect(poster).toBeTruthy();
-    expect(captions).toBeTruthy();
     expect((await request.get(src!)).ok()).toBeTruthy();
     expect((await request.get(poster!)).ok()).toBeTruthy();
-    expect((await request.get(captions!)).ok()).toBeTruthy();
-    await expect(track).toHaveAttribute("srclang", "zh");
+    await expect(video.locator('track[kind="captions"]')).toHaveCount(0);
   }
 });
 

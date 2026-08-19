@@ -21,14 +21,13 @@
   "fresh_review": "docs/fresh-review.md",
   "fresh_review_mode": "self-blind",
   "final_status": "pass",
-  "verification_note": "v23 adopts the approved deep-space system and closes the release surface: responsive navigation, contact QR/email/phone, project mast facts, seven captioned videos, metadata/discovery, automated route and interaction regression, and exact desktop/ultrawide/mobile evidence. The homepage single-orbit portrait universe and all project facts remain unchanged.",
+  "verification_note": "v23 adopts the approved deep-space system and closes the release surface: responsive navigation, contact QR/email/phone, project mast facts, seven subtitle-free videos, metadata/discovery, automated route and interaction regression, and exact desktop/ultrawide/mobile evidence. The homepage single-orbit portrait universe and all project facts remain unchanged.",
   "media_assets": [
     {
       "id": "global-opinion-agent-demo-web-v002",
       "source_strategy": "user-approved-final-transcoded-for-web",
       "video": "public/videos/global-opinion/global-opinion-agent-demo-web-v002.mp4",
       "poster": "public/videos/global-opinion-agent-demo-poster.jpg",
-      "captions": "public/captions/global-opinion-agent-demo.zh-CN.vtt",
       "status": "ready"
     },
     {
