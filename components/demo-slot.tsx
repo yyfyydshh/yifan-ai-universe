@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ProjectDemo } from "@/lib/site-data";
+import { publicPath } from "@/lib/site-config";
 
 type DemoSlotProps = { title: string; compact?: boolean; demo?: ProjectDemo };
 
@@ -64,9 +65,9 @@ export function DemoSlot({ title, compact = false, demo }: DemoSlotProps) {
       <div className="demo-status"><span /> {demo?.src ? "项目演示" : "演示预留位 · 共创中"}</div>
       <div className={`demo-frame ${demo?.src ? "demo-frame--media" : "demo-frame--placeholder"}`}>
         {demo?.src ? (
-          <video ref={videoRef} controls muted playsInline preload="metadata" poster={demo.poster}>
-            <source src={demo.src} />
-            {demo.captions ? <track kind="captions" src={demo.captions} srcLang="zh" label="中文" default /> : null}
+          <video ref={videoRef} controls muted playsInline preload="metadata" poster={demo.poster ? publicPath(demo.poster) : undefined}>
+            <source src={publicPath(demo.src)} />
+            {demo.captions ? <track kind="captions" src={publicPath(demo.captions)} srcLang="zh" label="中文" default /> : null}
             当前浏览器无法播放该项目演示。
           </video>
         ) : (
