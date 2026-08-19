@@ -12,7 +12,6 @@ export type ProjectVisualMode =
 export type ProjectDemo = {
   src?: string;
   poster?: string;
-  captions?: string;
   description?: string;
 };
 
@@ -249,7 +248,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/global-opinion/global-opinion-agent-demo-web-v002.mp4",
       poster: "/videos/global-opinion-agent-demo-poster.jpg",
-      captions: "/captions/global-opinion-agent-demo.zh-CN.vtt",
     },
     caseStudy: {
       visualKind: "global-evidence",
@@ -418,7 +416,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/sales-copilot/demo-v001.mp4",
       poster: "/videos/sales-copilot/poster-v001.jpg",
-      captions: "/captions/sales-copilot-demo.zh-CN.vtt",
     },
     caseStudy: {
       visualKind: "sales-conversion",
@@ -658,7 +655,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/docs-site/demo-v001.mp4",
       poster: "/videos/docs-site/poster-v001.jpg",
-      captions: "/captions/docs-site-demo.zh-CN.vtt",
     },
     caseStudy: {
       visualKind: "docs-routes",
@@ -752,7 +748,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/financial-regulatory-risk-monitor/demo-v002.mp4",
       poster: "/videos/financial-regulatory-risk-monitor/poster-v002.jpg",
-      captions: "/captions/regulatory-risk-demo.zh-CN.vtt",
     },
     caseStudy: {
       visualKind: "regulatory-applicability",
@@ -822,7 +817,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/tender-cleaner-29field.mp4",
       poster: "/videos/tender-cleaner-29field-poster.png",
-      captions: "/captions/tender-cleaner-demo.zh-CN.vtt",
       description: "真实案例脱敏重构：展示一条数千字招投标公告如何经过正文扫描、证据定位和语义判断，汇成固定 29 字段记录；原文未披露的项目工期与招标金额保持为空。",
     },
     caseStudy: {
@@ -903,7 +897,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/hot-news-brief/demo-v003.mp4",
       poster: "/videos/hot-news-brief/poster-v003.jpg",
-      captions: "/captions/hot-news-brief-demo.zh-CN.vtt",
       description: "用户提供的《蜘蛛侠》历史案例界面复现：从主题判断、快速模式提示，到 27→11→10 的证据筛选与十条新闻交付；非实时新闻流。",
     },
     caseStudy: {
@@ -975,7 +968,6 @@ export const projects: Project[] = [
     demo: {
       src: "/videos/humanizer-literary-demo.mp4",
       poster: "/videos/humanizer-literary-demo-poster.png",
-      captions: "/captions/humanizer-demo.zh-CN.vtt",
       description: "真实前后稿短摘录 + Agent 流程重建：用三处可对照改动说明，文学去 AI 味不是把文本磨成统一口吻，而是在内容锁定与证据边界内做最小编辑。",
     },
     caseStudy: {

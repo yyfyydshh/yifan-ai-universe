@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-08-19T02:06:42.897Z",
+  "generatedAt": "2026-08-19T03:43:30.249Z",
   "media": [
     {
       "id": "global-opinion",
       "video": "public/videos/global-opinion/global-opinion-agent-demo-web-v002.mp4",
       "poster": "public/videos/global-opinion-agent-demo-poster.jpg",
-      "captions": "public/captions/global-opinion-agent-demo.zh-CN.vtt",
       "expectedDuration": 54.634,
       "duration": 54.634,
       "bytes": 10527627,
@@ -15,19 +14,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": "aac",
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 8,
-        "firstCue": 0,
-        "lastCue": 54.5,
-        "sha256": "b1931f1b192cd8ce501735de0924fcb44244a89a21563f90ced3c1ac7c7d8f04"
-      }
+      "faststart": true
     },
     {
       "id": "sales-copilot",
       "video": "public/videos/sales-copilot/demo-v001.mp4",
       "poster": "public/videos/sales-copilot/poster-v001.jpg",
-      "captions": "public/captions/sales-copilot-demo.zh-CN.vtt",
       "expectedDuration": 72,
       "duration": 72,
       "bytes": 7621389,
@@ -37,19 +29,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": "aac",
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 8,
-        "firstCue": 0,
-        "lastCue": 71.9,
-        "sha256": "3a0399fa8b1911698f7a7757175000eb4db16cd40d4d1758646bac8e2126c5f4"
-      }
+      "faststart": true
     },
     {
       "id": "docs-system",
       "video": "public/videos/docs-site/demo-v001.mp4",
       "poster": "public/videos/docs-site/poster-v001.jpg",
-      "captions": "public/captions/docs-site-demo.zh-CN.vtt",
       "expectedDuration": 24,
       "duration": 24,
       "bytes": 5312560,
@@ -59,19 +44,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": null,
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 5,
-        "firstCue": 0,
-        "lastCue": 23.9,
-        "sha256": "4892dbecdd25adee09776e8fd58722ac257f7fb86481d0e8e326a0b61dfe7dd0"
-      }
+      "faststart": true
     },
     {
       "id": "regulatory-risk",
       "video": "public/videos/financial-regulatory-risk-monitor/demo-v002.mp4",
       "poster": "public/videos/financial-regulatory-risk-monitor/poster-v002.jpg",
-      "captions": "public/captions/regulatory-risk-demo.zh-CN.vtt",
       "expectedDuration": 78,
       "duration": 78,
       "bytes": 7759606,
@@ -81,19 +59,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": null,
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 8,
-        "firstCue": 0,
-        "lastCue": 77.9,
-        "sha256": "9ade09b174a865e245ff87f22c9be8c9dd2fd17e658eacb71bce54c2354395c3"
-      }
+      "faststart": true
     },
     {
       "id": "tender-cleaner",
       "video": "public/videos/tender-cleaner-29field.mp4",
       "poster": "public/videos/tender-cleaner-29field-poster.png",
-      "captions": "public/captions/tender-cleaner-demo.zh-CN.vtt",
       "expectedDuration": 38,
       "duration": 38,
       "bytes": 3382280,
@@ -103,19 +74,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": null,
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 6,
-        "firstCue": 0,
-        "lastCue": 37.9,
-        "sha256": "c4c9652d86433d12e8aa0a7d77d5e79ae2ac0a7ee06b0b4a278e8f722f68cfc2"
-      }
+      "faststart": true
     },
     {
       "id": "hot-news-brief",
       "video": "public/videos/hot-news-brief/demo-v003.mp4",
       "poster": "public/videos/hot-news-brief/poster-v003.jpg",
-      "captions": "public/captions/hot-news-brief-demo.zh-CN.vtt",
       "expectedDuration": 42,
       "duration": 42,
       "bytes": 4135794,
@@ -125,19 +89,12 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": null,
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 7,
-        "firstCue": 0,
-        "lastCue": 41.9,
-        "sha256": "4cd338d9d2b683ee09ae2508e22b14cc5670bc5453689c28999beb5bd4922def"
-      }
+      "faststart": true
     },
     {
       "id": "humanizer",
       "video": "public/videos/humanizer-literary-demo.mp4",
       "poster": "public/videos/humanizer-literary-demo-poster.png",
-      "captions": "public/captions/humanizer-demo.zh-CN.vtt",
       "expectedDuration": 60,
       "duration": 60,
       "bytes": 2904699,
@@ -147,13 +104,7 @@
       "resolution": "1920x1080",
       "frameRate": "30/1",
       "audioCodec": null,
-      "faststart": true,
-      "captionsInfo": {
-        "cueCount": 8,
-        "firstCue": 0,
-        "lastCue": 59.9,
-        "sha256": "e269067164dc9a90a5bbedc933cb2158ed71268fa6d65572e4ece1a210a1f265"
-      }
+      "faststart": true
     }
   ]
 }

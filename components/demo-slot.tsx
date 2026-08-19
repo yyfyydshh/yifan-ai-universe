@@ -67,7 +67,6 @@ export function DemoSlot({ title, compact = false, demo }: DemoSlotProps) {
         {demo?.src ? (
           <video ref={videoRef} controls muted playsInline preload="metadata" poster={demo.poster ? publicPath(demo.poster) : undefined}>
             <source src={publicPath(demo.src)} />
-            {demo.captions ? <track kind="captions" src={publicPath(demo.captions)} srcLang="zh" label="中文" default /> : null}
             当前浏览器无法播放该项目演示。
           </video>
         ) : (
