@@ -1,2 +1,2 @@
-:HL["/yifan-ai-universe/_next/static/chunks/1wdesn9baa232.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"work","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"docs-system","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"PsYFELc3JcQtAZzYnakn6"}
+:HL["/_next/static/chunks/1wdesn9baa232.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"work","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"docs-system","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"TNySFiFRAB1bVCg5_n4rp"}

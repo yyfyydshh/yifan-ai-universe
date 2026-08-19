@@ -1,5 +1,5 @@
 User-Agent: *
-Allow: /yifan-ai-universe/
-Disallow: /yifan-ai-universe/lab
+Allow: /
+Disallow: /lab
 
-Sitemap: https://yyfyydshh.github.io/yifan-ai-universe/sitemap.xml
+Sitemap: https://yangyifan.me/sitemap.xml
