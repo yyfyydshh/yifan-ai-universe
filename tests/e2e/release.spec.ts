@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 const projects = ["global-opinion", "sales-copilot", "docs-system", "regulatory-risk", "tender-cleaner", "hot-news-brief", "humanizer"];
-const pages = ["/", "/work", "/career", "/notes", "/profile", ...projects.map(slug => `/work/${slug}`), "/notes/ai-capability-reuse", "/notes/agent-reliability"];
+const pages = ["/", "/work", "/career", "/notes", "/profile", ...projects.map(slug => `/work/${slug}`), "/notes/ai-capability-reuse", "/notes/agent-reliability", "/notes/human-future-and-dried-fruit"];
 const widths = [320, 375, 414, 768, 960, 1280, 1440, 1920];
 
 test("responsive matrix keeps titles and the document inside the viewport", async ({ page }) => {

@@ -19,6 +19,16 @@
   --color-success: oklch(72% 0.1 160);
   --color-warning: oklch(72% 0.09 70);
   --color-danger: oklch(65% 0.12 32);
+  /* Quiet light and depth support an abstract capability space. */
+  --color-starlight: oklch(94% 0.025 85);
+  --color-space-shadow: oklch(7% 0.012 265);
+  --color-project-highlight: oklch(61% 0.11 297 / 0.28);
+  --color-project-mid: oklch(18% 0.03 277 / 0.85);
+  --color-project-base: oklch(11% 0.014 265);
+  --color-project-edge: oklch(70% 0.08 297 / 0.35);
+  --color-orbit-silver: oklch(76% 0.025 260);
+  --color-atmosphere: oklch(72% 0.07 285 / 0.18);
+  --color-stellar-dust: oklch(48% 0.055 285 / 0.12);
   /* Personal name is the sole display-serif role. All information headings stay sans
      so long Chinese titles read as an editorial system rather than a poster. */
   --font-personal-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;

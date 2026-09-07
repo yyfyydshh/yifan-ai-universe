@@ -15,8 +15,9 @@ export default function Home() {
   return (
     <main>
       <section className="home-hero">
-        <SpaceField />
+        <SpaceField interactive />
         <div className="hero-copy">
+          <p className="hero-signature"><span aria-hidden="true" />AI CAPABILITY UNIVERSE</p>
           <h1>杨逸凡</h1>
           <p className="hero-role">AI Skill / Agent 工作流搭建<br />Vibe Coding 交付</p>
           <p className="hero-thesis">把模糊的业务问题，<br />变成可运行、可验证、可复用的 AI 能力。</p>

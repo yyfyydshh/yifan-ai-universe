@@ -1028,6 +1028,15 @@ export const metrics = [
 
 export const notes = [
   {
+    slug: "human-future-and-dried-fruit",
+    title: "关于人类未来与果干之前的高维膨胀联系",
+    summary: "从 AI 带来的新一轮“扫盲”，想到文明进程、个人 IP，以及更像“人”的未来。",
+    theme: "时代随想",
+    readingTime: "约 5 分钟",
+    conclusionType: "个人随笔",
+    readingDirection: "从文明进程回到七楼的果干",
+  },
+  {
     slug: "ai-capability-reuse",
     title: "从一张排版错位的小图，到另一条产品线的文档站上线",
     summary: "我如何把一次 AI 文档迁移，整理成同事可以复用的经验包。",

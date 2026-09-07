@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import "./globals.css";
+import "./spatial.css";
 
 export const metadata: Metadata = {
   metadataBase: siteConfig.url,

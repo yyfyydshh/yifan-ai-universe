@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Pause, Play } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   useCallback,
@@ -159,6 +160,7 @@ export function ProjectUniverse({
   const layoutFrameTimeRef = useRef(0);
   const backOrbitPathRefs = useRef<Array<SVGPathElement | null>>([]);
   const frontOrbitPathRefs = useRef<Array<SVGPathElement | null>>([]);
+  const orbitSizeRef = useRef("");
   const velocityRef = useRef<Rotation3>({ yaw: 0, pitch: 0, roll: 0 });
   const cruiseDirectionRef = useRef<Rotation3>(
     normalizeRotation(isHome
@@ -182,11 +184,16 @@ export function ProjectUniverse({
   const [isDragging, setIsDragging] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [manuallyPaused, setManuallyPaused] = useState(false);
 
   const setPaused = useCallback((reason: string, paused: boolean) => {
     if (paused) pauseReasons.current.add(reason);
     else pauseReasons.current.delete(reason);
   }, []);
+
+  useEffect(() => {
+    setPaused("manual", manuallyPaused);
+  }, [manuallyPaused, setPaused]);
 
   const setRevealStrength = useCallback((strength: number) => {
     if (!isHome) return;
@@ -230,8 +237,8 @@ export function ProjectUniverse({
     const rotation = rotationRef.current;
     const centerX = width * (isHome ? 0.55 : 0.6);
     const centerY = height * (isHome ? 0.44 : 0.51);
-    const radiusX = Math.min(width * (isHome ? 0.43 : 0.32), height * (isHome ? 0.78 : 0.72));
-    const radiusY = height * (isHome ? 0.54 : 0.37);
+    const radiusX = Math.min(width * (isHome ? 0.34 : 0.32), height * (isHome ? 0.78 : 0.72));
+    const radiusY = height * (isHome ? 0.44 : 0.37);
     const breathe = 1 + Math.sin(motionSeconds * 0.11) * 0.008;
 
     root.style.setProperty("--scene-yaw", `${rotation.yaw}deg`);
@@ -275,7 +282,11 @@ export function ProjectUniverse({
       };
     });
 
-    if (isHome) {
+    // The home orbit is fixed in space. Only its satellites move; regenerate
+    // the sampled SVG paths on resize instead of rebuilding them every frame.
+    const orbitSize = `${width}:${height}`;
+    if (isHome && orbitSizeRef.current !== orbitSize) {
+      orbitSizeRef.current = orbitSize;
       root.querySelectorAll<SVGSVGElement>(".universe-orbit-field")
         .forEach((field) => field.setAttribute("viewBox", `0 0 ${width} ${height}`));
       const projectToViewport = (point: Vector3) => {
@@ -340,25 +351,21 @@ export function ProjectUniverse({
         )
       : 2;
 
-    const foregroundIndex = isHome
-      ? renderedLayouts.reduce<number | null>((selected, layout, index) => {
-          if (layout.depth < 0.5 || faceDistanceFor(layout) < 1.04) return selected;
-          if (selected === null || layout.depth > renderedLayouts[selected].depth) return index;
-          return selected;
-        }, null)
-      : null;
-
     shown.forEach((_, index) => {
       const element = orbRefs.current[index];
       if (!element) return;
       const { x, y, depth } = renderedLayouts[index];
       const isRaised = hoveredIndexRef.current === index || focusedIndexRef.current === index;
-      const scale = (isHome ? (0.88 + depth * 0.3) * homeOrbBoostRef.current : 0.74 + depth * 0.34) * (isRaised ? 1.08 : 1);
-      const opacity = isRaised ? 1 : isHome ? 0.84 + depth * 0.16 : 0.54 + depth * 0.46;
+      // The home ring has a deliberately wide scale range: a far-side
+      // capability recedes to a compact satellite, while a near-side one
+      // becomes the foreground object. Position, scale and z-index therefore
+      // all read from the same physical depth instead of merely orbiting flat.
+      const scale = (isHome ? (0.6 + depth * 0.66) * homeOrbBoostRef.current : 0.74 + depth * 0.34) * (isRaised ? 1.08 : 1);
+      const opacity = 1; // Preserve text contrast; size and occlusion carry depth.
       // A single orbit has one unambiguous front half and back half. Every
       // satellite follows that same Z truth; the face guard only prevents a
       // foreground satellite from cutting across the portrait's face.
-      const isForeground = isHome && index === foregroundIndex;
+      const isForeground = isHome && depth >= 0.5 && faceDistanceFor(renderedLayouts[index]) >= 1.04;
       element.style.setProperty("--orbit-x", `${x}px`);
       element.style.setProperty("--orbit-y", `${y}px`);
       element.style.setProperty("--orbit-scale", `${scale}`);
@@ -366,7 +373,10 @@ export function ProjectUniverse({
       // the locked transparent avatar. The avatar alpha provides the physical
       // occlusion; fading the satellite itself made the system look incomplete.
       element.style.setProperty("--orbit-opacity", `${opacity}`);
-      element.style.zIndex = `${isRaised ? 160 : isForeground ? 132 : isHome ? Math.round(56 + depth * 10) : Math.round(42 + depth * 24)}`;
+      // Hover must not pull a far-side project through the portrait. Keyboard
+      // focus can lift it temporarily so every project remains accessible.
+      const isKeyboardFocused = focusedIndexRef.current === index;
+      element.style.zIndex = `${isKeyboardFocused || (!isHome && isRaised) ? 160 : isForeground ? Math.round(122 + depth * 10) : isHome ? Math.round(56 + depth * 10) : Math.round(42 + depth * 24)}`;
       element.dataset.depth = depth.toFixed(3);
       element.dataset.plane = isForeground ? "foreground" : "background";
     });
@@ -400,7 +410,7 @@ export function ProjectUniverse({
       rootRef.current?.style.setProperty("--avatar-ambient", "0.15");
       return;
     }
-    rootRef.current?.style.setProperty("--avatar-ambient", "0.12");
+    rootRef.current?.style.setProperty("--avatar-ambient", "0.1");
   }, [isHome, reducedMotion, setRevealStrength]);
 
   useEffect(() => {
@@ -439,6 +449,10 @@ export function ProjectUniverse({
     const tick = (time: number) => {
       const delta = lastFrameRef.current ? Math.min(40, time - lastFrameRef.current) : 0;
       lastFrameRef.current = time;
+      if (pauseReasons.current.has("manual")) {
+        frameRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const canMove = pauseReasons.current.size === 0 && !pointerRef.current;
 
       if (canMove && time >= resumeAtRef.current) {
@@ -502,7 +516,7 @@ export function ProjectUniverse({
   }, [applyPositions, isHome, isMobile, reducedMotion]);
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (isMobile || reducedMotion || event.button !== 0) return;
+    if (isMobile || reducedMotion || event.button !== 0 || (event.target as Element).closest("button")) return;
     syncPointerVisuals(event.clientX, event.clientY);
     if (isHome) {
       rootRef.current?.setAttribute("data-interaction", "pressing");
@@ -530,7 +544,7 @@ export function ProjectUniverse({
     if (!pointer || pointer.id !== event.pointerId) {
       if (isHome && pointerInsideRef.current) {
         const projectIsActive = hoveredIndexRef.current !== null || focusedIndexRef.current !== null;
-        setRevealStrength(projectIsActive ? 0.45 : 1);
+        setRevealStrength(projectIsActive ? 0.85 : 1);
       }
       return;
     }
@@ -654,7 +668,7 @@ export function ProjectUniverse({
         window.setTimeout(() => {
           if (performance.now() < revealResumeAtRef.current || !pointerInsideRef.current) return;
           rootRef.current?.setAttribute("data-interaction", "exploring");
-          setRevealStrength(hoveredIndexRef.current !== null || focusedIndexRef.current !== null ? 0.45 : 1);
+          setRevealStrength(hoveredIndexRef.current !== null || focusedIndexRef.current !== null ? 0.85 : 1);
         }, 230);
       }
     }
@@ -718,7 +732,7 @@ export function ProjectUniverse({
         pointerInsideRef.current = true;
         rootRef.current?.setAttribute("data-interaction", "exploring");
         syncPointerVisuals(event.clientX, event.clientY);
-        setRevealStrength(hoveredIndexRef.current !== null || focusedIndexRef.current !== null ? 0.45 : 1);
+        setRevealStrength(hoveredIndexRef.current !== null || focusedIndexRef.current !== null ? 0.85 : 1);
       }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
@@ -732,11 +746,20 @@ export function ProjectUniverse({
           setRevealStrength(0);
         }
       }}
-      onFocusCapture={() => setPaused("focus", true)}
+      onFocusCapture={(event) => setPaused("focus", !(event.target as Element).closest("button"))}
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setPaused("focus", false);
       }}
     >
+      <div className="universe-toolbar">
+        <p>{isHome ? "作品与能力" : "七个项目 · 一个能力系统"}<span>{String(shown.length).padStart(2, "0")} PROJECTS</span></p>
+        {!isMobile && !reducedMotion ? (
+          <button type="button" aria-pressed={manuallyPaused} aria-label={manuallyPaused ? "继续空间巡航" : "暂停空间巡航"} onClick={() => setManuallyPaused(paused => !paused)}>
+            {manuallyPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
+            <span>{manuallyPaused ? "继续巡航" : "暂停巡航"}</span>
+          </button>
+        ) : null}
+      </div>
       {isHome ? (
         <svg className="universe-orbit-field universe-orbit-field--back" aria-hidden="true">
           {HOME_ORBIT_LANES.map((_, laneIndex) => (
@@ -794,6 +817,7 @@ export function ProjectUniverse({
             orbRefs.current[index] = element;
           }}
           data-orbit-index={index}
+          data-project={project.slug}
           className={`project-orb project-orb--${project.orbit} project-orb--${index + 1}`}
           href={`/work/${project.slug}`}
           key={project.slug}
@@ -803,7 +827,7 @@ export function ProjectUniverse({
             hoveredIndexRef.current = index;
             setPaused("hover", true);
             rootRef.current?.setAttribute("data-interaction", "project-hover");
-            setRevealStrength(0.45);
+            setRevealStrength(0.85);
             applyPositions();
           }}
           onMouseLeave={() => {
@@ -816,7 +840,7 @@ export function ProjectUniverse({
           onFocus={() => {
             focusedIndexRef.current = index;
             rootRef.current?.setAttribute("data-interaction", "project-focus");
-            setRevealStrength(0.45);
+            setRevealStrength(0.85);
             applyPositions();
           }}
           onBlur={() => {
@@ -827,18 +851,20 @@ export function ProjectUniverse({
           }}
           style={{ left: "50%", top: "50%" }}
         >
-          <span className="orb-glow" aria-hidden="true" />
-          <span className="project-orb__icon"><ProjectIcon name={project.icon} /></span>
+          <span className="project-aura" aria-hidden="true"><span className="project-aura__surface" /></span>
+          <span className="project-orb__icon" aria-hidden="true"><ProjectIcon name={project.icon} /></span>
+          <span className="project-caption">
           <small>{isHome ? String(index + 1).padStart(2, "0") : project.index} / {project.category}</small>
           <strong>{isHome && project.slug === "humanizer" ? "文学去 AI 味" : project.shortTitle}</strong>
           <em>{project.tagline}</em>
           <b>查看项目 →</b>
+          </span>
         </Link>
       ))}
-      {!isHome ? (
+      {!isMobile ? (
         <p className="universe-hint">
           <span aria-hidden="true">↗</span>
-          {isMobile ? "纵向浏览项目" : "三维旋转 · 拖动改变方向 · 点击进入"}
+          {reducedMotion ? "选择项目，了解它如何工作" : "拖动探索 · 点击查看项目"}
         </p>
       ) : null}
     </div>
