@@ -3,7 +3,7 @@ import path from "node:path";
 import { expect, test } from "@playwright/test";
 
 const articles = [
-  { slug: "human-future-and-dried-fruit", section: "writing" },
+  { slug: "human-future-and-dried-fruit", section: "thoughts" },
   { slug: "ai-capability-reuse", section: "thoughts" },
   { slug: "agent-reliability", section: "thoughts" },
 ];
@@ -33,7 +33,7 @@ for (const article of articles) {
 test("reading measure, font size and paragraph rhythm remain usable from phone to desktop", async ({ page }) => {
   for (const width of [320, 375, 414, 768, 1440]) {
     await page.setViewportSize({ width, height: width < 768 ? 844 : 900 });
-    await page.goto("/writing/human-future-and-dried-fruit");
+    await page.goto("/thoughts/human-future-and-dried-fruit");
     const audit = await page.evaluate(() => {
       const heading = document.querySelector<HTMLElement>(".article-page h1")!;
       const paragraph = document.querySelector<HTMLElement>(".article-body > p:nth-of-type(2)")!;

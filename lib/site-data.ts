@@ -1026,9 +1026,23 @@ export const metrics = [
   { value: "4600+", label: "年度客户问题", note: "上一阶段" },
 ];
 
-export const notes = [
+export type NoteEntry = {
+  slug: string;
+  section?: "writing" | "thoughts";
+  legacySections?: ("writing" | "thoughts")[];
+  title: string;
+  summary: string;
+  theme: string;
+  readingTime: string;
+  conclusionType: string;
+  readingDirection: string;
+};
+
+export const notes: NoteEntry[] = [
   {
     slug: "human-future-and-dried-fruit",
+    section: "thoughts",
+    legacySections: ["writing"],
     title: "关于人类未来与果干之前的高维膨胀联系",
     summary: "从 AI 带来的新一轮“扫盲”，想到文明进程、个人 IP，以及更像“人”的未来。",
     theme: "时代随想",

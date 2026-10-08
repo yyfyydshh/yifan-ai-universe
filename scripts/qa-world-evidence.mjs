@@ -25,7 +25,7 @@ const sections=[
   ...['music','games','films','stuff'].map(id=>({id:`waiting-${id}`,route:`/${id}`,reference:paperRef})),
   {id:'career',route:'/career',reference:articleRef},
   {id:'profile',route:'/profile',reference:paperRef},
-  ...['human-future-and-dried-fruit','ai-capability-reuse','agent-reliability'].map((id,i)=>({id:`article-${id}`,route:`/${i?'thoughts':'writing'}/${id}`,reference:articleRef})),
+  ...['human-future-and-dried-fruit','ai-capability-reuse','agent-reliability'].map(id=>({id:`article-${id}`,route:`/thoughts/${id}`,reference:articleRef})),
   {id:'project-mast',route:'/work/sales-copilot',reference:paperRef},
   ...projectSlugs.map(id=>({id:`tour-${id}`,route:`/work/${id}`,reference:paperRef,selector:'.project-tour'})),
   ...projectSlugs.map(id=>({id:`case-${id}`,route:`/work/${id}`,reference:paperRef,selector:id==='global-opinion'?'.project-evidence':'#case-study'})),

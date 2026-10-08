@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 const projects = ["global-opinion", "sales-copilot", "docs-system", "regulatory-risk", "tender-cleaner", "hot-news-brief", "humanizer"];
 const articles = [
-  { slug: "human-future-and-dried-fruit", section: "writing" },
+  { slug: "human-future-and-dried-fruit", section: "thoughts" },
   { slug: "ai-capability-reuse", section: "thoughts" },
   { slug: "agent-reliability", section: "thoughts" },
 ];

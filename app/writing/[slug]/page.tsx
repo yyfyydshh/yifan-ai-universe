@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NoteArticle } from "@/components/note-article";
-import { findNote, getNoteHref, getSectionNotes } from "@/lib/content-index";
+import { findNote, getLegacySectionNotes, getNoteHref, getSectionNotes } from "@/lib/content-index";
 import { buildPageMetadata } from "@/lib/site-config";
 
 export const dynamicParams = false;
-export function generateStaticParams() { return getSectionNotes("writing").map(note => ({ slug: note.slug })); }
+export function generateStaticParams() {
+  return [...getSectionNotes("writing"), ...getLegacySectionNotes("writing")].map(note => ({ slug: note.slug }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

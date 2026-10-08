@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { projects as projectData } from "../../lib/site-data";
 
 const projects = ["global-opinion", "sales-copilot", "docs-system", "regulatory-risk", "tender-cleaner", "hot-news-brief", "humanizer"];
-const pages = ["/", "/work", "/career", "/notes", "/profile", "/writing", "/thoughts", "/music", "/games", "/films", "/stuff", ...projects.map(slug => `/work/${slug}`), "/writing/human-future-and-dried-fruit", "/thoughts/ai-capability-reuse", "/thoughts/agent-reliability", "/notes/human-future-and-dried-fruit", "/notes/ai-capability-reuse", "/notes/agent-reliability"];
+const pages = ["/", "/work", "/career", "/notes", "/profile", "/writing", "/thoughts", "/music", "/games", "/films", "/stuff", ...projects.map(slug => `/work/${slug}`), "/thoughts/human-future-and-dried-fruit", "/thoughts/ai-capability-reuse", "/thoughts/agent-reliability", "/notes/human-future-and-dried-fruit", "/notes/ai-capability-reuse", "/notes/agent-reliability"];
 
 for (const width of [320, 375, 414, 768, 960, 1280, 1440, 1920]) {
   test(`release pages fit the ${width}px viewport without clipped titles`, async ({ page }) => {
