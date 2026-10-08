@@ -1,0 +1,9 @@
+.world-transition { position:fixed; inset:0; z-index:90; display:grid; place-items:center; color:#355348; background:#f8f1dd; animation:world-curtain-in .6s cubic-bezier(.25,.7,.25,1) both; }
+.world-transition.is-arriving { animation:world-curtain-out .6s cubic-bezier(.4,0,.55,1) both; pointer-events:none; }
+.world-transition-paper { display:flex; flex-direction:column; align-items:center; gap:1rem; font-family:var(--font-cartoon); font-size:28px; }
+.world-transition-paper svg { transform:rotate(10deg); animation:world-plane-lift .7s ease-in-out infinite alternate; }
+.world-transition-paper i { width:90px; border-bottom:2px dashed #8ea185; }
+@keyframes world-curtain-in { from { clip-path:circle(0 at 50% 55%); } to { clip-path:circle(150% at 50% 55%); } }
+@keyframes world-curtain-out { from { clip-path:circle(150% at 50% 55%); } to { clip-path:circle(0 at 50% 55%); } }
+@keyframes world-plane-lift { from { translate:-8px 5px; } to { translate:10px -8px; } }
+@media(prefers-reduced-motion:reduce) { .world-transition { display:none; } }

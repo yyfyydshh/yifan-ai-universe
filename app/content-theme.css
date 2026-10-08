@@ -1,0 +1,288 @@
+/* The island carries the illustration. Content uses quiet paper, clear type and
+   the same green/ink palette; evidence and existing interactions stay intact. */
+:is(.project-page, .profile-page, .career-page, .article-page) {
+  --text-xs: 0.875rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  color: var(--color-ink);
+}
+
+:is(.project-page, .profile-page, .career-page) {
+  width: min(87.5rem, 100%);
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 5vw, 4rem) 5rem;
+}
+
+:is(.project-page, .profile-page, .career-page, .article-page) .back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-size: 0.9375rem;
+}
+
+:is(.project-page, .profile-page, .career-page, .article-page) .section-label {
+  color: var(--color-muted);
+  font: 500 0.8125rem/1.5 var(--font-body);
+  letter-spacing: 0.04em;
+}
+
+main.project-page h1 {
+  max-width: 23ch;
+  font-size: clamp(2.25rem, 4vw, 3.65rem);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+main.project-page h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+main.project-page h3 { font-size: clamp(1.125rem, 1.8vw, 1.4rem); line-height: 1.5; }
+
+.project-page .project-title-row {
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-page .project-title-copy .lead {
+  max-width: 45rem;
+  margin-block: 1rem 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+}
+
+.project-page .project-title-copy .tag-list { justify-content: flex-start; gap: 0.5rem; }
+.project-page .tag-list span { border: 0; border-radius: 6px; background: var(--color-paper-2); color: var(--color-ink-2); font: 400 0.8125rem/1.5 var(--font-body); }
+.project-source-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0.75rem; color: var(--color-accent); font-size: 0.9375rem; text-decoration: underline; text-underline-offset: 0.2em; }
+.project-mast-art { align-self: center; width: 100%; }
+.project-mast-art img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.project-page .project-mast-facts { margin-top: 2rem; }
+.project-page .project-mast-facts > div { padding: 1.25rem 1.5rem; }
+.project-page .project-mast-facts > div:first-child { padding-left: 0; }
+.project-page .project-mast-facts dt { font: 600 0.875rem/1.5 var(--font-body); letter-spacing: 0; }
+.project-page .project-mast-facts dd { margin-top: 0.5rem; font-size: 0.9375rem; line-height: 1.75; text-wrap: pretty; }
+
+.project-page > .demo-slot {
+  width: min(65rem, 100%);
+  margin-block: 3rem 4rem;
+  border-radius: 12px;
+  background: var(--color-paper);
+}
+.project-page .demo-status { padding: 0.875rem 1.25rem; font-size: 0.875rem; }
+.project-page .demo-status span { box-shadow: none; }
+.project-page .demo-message,
+.project-page .demo-route i,
+.project-page .demo-media-toolbar { background: var(--color-paper-2); }
+.project-page .demo-route i { box-shadow: none; }
+.project-page .demo-copy { padding: 1.25rem 1.5rem; }
+.project-page .demo-copy h2 { font-size: 1.2rem; }
+.project-page .demo-copy p { font-size: 0.9375rem; line-height: 1.75; }
+.project-page .demo-label { display: none; }
+.project-page .demo-media-toolbar button { min-height: 44px; padding-inline: 1rem; border-radius: 8px; font-size: 0.875rem; }
+
+/* Replace the few literal dark surfaces in the legacy diagrams. */
+.project-page :is(.project-meta, .observatory-panel, .observatory-stage, .observatory-mobile-scene, .scene-core, .system-node, .output-stack > div, .reuse-core, .regulatory-stage-deck) {
+  background: var(--color-paper-2);
+  box-shadow: none;
+}
+.project-page .regulatory-stage-nav > div[data-active="true"] button > span,
+.project-page .regulatory-stage-mark { background: var(--color-accent-soft); }
+.project-page .regulatory-stage-focus::before { background: var(--color-accent); }
+.project-page :is(.evidence-stage-decision, .quality-diagnostic) { background: var(--color-accent-soft); }
+.project-page :is(.judgment-lens i, .quality-gate-toolbar p i, .signal-cloud i) { box-shadow: none; }
+.project-page :is(.case-study-summary > div > span, .project-meta-icon) { border-radius: 10px; background: var(--color-paper-2); }
+.project-page :is(.case-workbench, .evidence-workbench, .sales-conversion-workbench, .regulatory-stage-deck) { border-radius: 10px; }
+.project-page :is(.case-study, .project-evidence, .sales-conversion) { padding-block: 3rem; }
+.project-page :is(.case-study-heading, .evidence-heading, .sales-conversion-hero) { padding-bottom: 2rem; }
+.project-page :is(.case-study-heading-copy > p, .evidence-heading-copy > p, .sales-conversion-hero > div > p:not(.section-label)) { font-size: 1rem; line-height: 1.8; }
+.project-page :is(.case-depth-panel, .evidence-deliverables) { padding-left: 1.5rem; }
+
+/* Labels stay readable, including the fixed-size microtype in the old consoles. */
+.project-page :is(small, .case-depth-panel > header > span, .case-depth-panel section > span, .case-live-state > span, .case-deliverable-strip > span, .case-source-notes span, .case-boundary span, .case-depth-next > span, .tender-input-detail > span, .tender-console-head span, .tender-field-drawer span, .tender-exception-lane > div span, .tender-delivery-gate header span, .tender-schema-grid section > header span, .news-console > header span, .news-radar span, .news-exclusion-ledger header span, .news-output-modes header > span, .news-candidate-grid button > span, .news-candidate-grid button > i, .news-candidate-inspector dt, .news-candidate-inspector dd, .humanizer-mode-switch > div > span, .humanizer-stage-map header span, .humanizer-lock-map header span, .humanizer-diff header span, .humanizer-reviewers header span, .humanizer-scope-gate span, .humanizer-stage-map button span, .humanizer-mechanism-heading span, .humanizer-lock-map button span, .humanizer-lock-inspector > div > span, .humanizer-proposals button > i, .humanizer-diff-compare article > span, .humanizer-reviewers > p span, .quality-diagnostic dt, .quality-gate-note, .docs-console > header span, .docs-acceptance-heading > span, .docs-route-tabs span, .regulatory-console > header span, .regulatory-guards > div:first-child > span, .regulatory-proof > span, .regulatory-artifacts > span, .regulatory-route span, .regulatory-stage-mark b, .regulatory-stage-details section > span, .regulatory-stage-route > span) {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.project-page :is(.regulatory-stage-nav b, .news-gates button b) { font-size: 0.875rem; }
+.project-page :is(.case-workbench, .case-study, .project-evidence, .sales-conversion, .project-observatory) button { min-height: 44px; }
+.project-page :is(.project-narrative article, .sales-turn-list button, .sales-dimension-bridge .sales-dimension-list p) { opacity: 1; }
+.project-page .project-actions { margin-top: 3rem; }
+
+:is(.project-page, .profile-page, .career-page) :is(.project-actions, .page-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+:is(.project-page, .profile-page, .career-page) :is(.project-actions, .page-actions) a { display: inline-flex; min-height: 44px; align-items: center; color: var(--color-accent); }
+
+/* About and career keep real evidence visible, including inactive scroll steps. */
+.profile-page .profile-hero { grid-template-columns: minmax(0, 1fr) minmax(12rem, 20rem); align-items: center; gap: 3rem; min-height: 0; padding-bottom: 3rem; }
+.profile-page .profile-hero h1 { font: 650 clamp(2.2rem, 4vw, 3.5rem)/1.3 var(--font-heading); letter-spacing: -0.035em; }
+.profile-page .profile-hero p:not(.section-label) { font-size: 1.0625rem; line-height: 1.85; }
+.profile-page .profile-contact { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; margin-top: 1.5rem; font-size: 0.9375rem; }
+.profile-page .profile-contact a { display: inline-flex; align-items: center; min-height: 44px; }
+.profile-page .profile-contact a:last-child { margin-top: 0; border: 1px solid var(--color-accent); border-radius: 8px; padding-inline: 1rem; }
+.profile-portrait { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.profile-page .capability-system { grid-template-columns: minmax(14rem, 20rem) minmax(0, 1fr); gap: 3rem; margin-block: 3rem; border-top: 0; }
+.profile-page .capability-diagram { padding-top: 1rem; }
+.profile-page .capability-diagram > h2 { font: 600 clamp(1.5rem, 2.4vw, 2rem)/1.5 var(--font-heading); letter-spacing: -0.02em; }
+.profile-page .capability-stages article { min-height: 0; padding-block: 2rem; opacity: 1; }
+.profile-page .capability-stages h3 { margin-block: 0.75rem 1.25rem; font: 600 1.5rem/1.5 var(--font-heading); }
+.profile-page .capability-method b { font-weight: 600; }
+.profile-page .capability-method p { font-size: 1rem; line-height: 1.85; }
+.profile-page .capability-path a { min-height: 52px; }
+.profile-page .capability-path a[aria-current="step"] > span { background: var(--color-accent-soft); box-shadow: none; }
+.profile-page :is(.capability-diagram > p, .capability-path a > span) { font-size: 0.8125rem; }
+.profile-page .capability-path > i { background: var(--color-accent); }
+.profile-page .profile-record h2 { font-size: 1.4rem; }
+
+.career-page .page-intro { max-width: 64rem; margin-bottom: 3rem; }
+.career-page .page-intro h1 { font: 650 clamp(2.2rem, 4vw, 3.5rem)/1.3 var(--font-heading); letter-spacing: -0.035em; }
+.career-page .page-intro > p:not(.section-label) { max-width: 48rem; font-size: 1.0625rem; line-height: 1.85; }
+.career-page .career-overview { margin-top: 2rem; }
+.career-page .career-overview dt { font: 600 1.4rem/1.4 var(--font-heading); }
+.career-page .career-trajectory { grid-template-columns: 10rem minmax(0, 1fr); gap: 2rem; }
+.career-page .career-rail { padding: 1rem; border-radius: 10px; background: var(--color-paper-2); }
+.career-page .career-rail > span { font-size: 0.75rem; letter-spacing: 0.02em; }
+.career-page .career-rail a { min-height: 44px; align-items: center; }
+.career-page .career-rail a b { font-size: 0.8125rem; box-shadow: none; }
+.career-page .career-rail a small { font-size: 0.8125rem; line-height: 1.6; }
+.career-page .career-rail-line i { background: var(--color-accent); }
+.career-page .career-trajectory .career-entry { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.5rem 1.25rem; padding-block: 2.5rem; opacity: 1; }
+.career-page .career-time { grid-column: 2; font-size: 0.875rem; }
+.career-page .career-content { grid-column: 2; }
+.career-page .career-content h2 { font: 600 clamp(1.5rem, 2.3vw, 2rem)/1.4 var(--font-heading); }
+.career-page .career-content h3 { font: 500 1.125rem/1.6 var(--font-heading); }
+.career-page .career-content p { font-size: 1rem; line-height: 1.85; }
+.career-page .career-content :is(.career-state, .career-scope, .career-evidence p) { font-size: 0.875rem; }
+.career-page .career-state span { box-shadow: none; }
+.career-page .career-evidence > div { opacity: 1; transform: none; }
+.career-page .career-evidence strong { font-family: var(--font-heading); }
+.career-page .career-foundation { margin-top: 3rem; }
+.career-page .career-foundation h2 { font: 600 1.65rem/1.5 var(--font-heading); }
+.career-page .career-evolution { padding: 1.5rem; border-radius: 10px; background: var(--color-paper-2); }
+
+/* ~760px text measure, with no scene or decorative texture behind the article. */
+main.article-page {
+  width: min(55rem, 100%);
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 4vw, 3.75rem) 4rem;
+  background: var(--color-paper);
+}
+.article-page > header { width: 100%; padding-bottom: 2rem; }
+.article-page > header h1,
+.article-page.article-page--essay > header h1 { max-width: 100%; font: 650 clamp(2rem, 4vw, 3.15rem)/1.35 var(--font-heading); letter-spacing: -0.035em; }
+.article-page > header > p { font: 400 0.875rem/1.6 var(--font-body); }
+.article-page > header span { font-size: 1.0625rem; line-height: 1.85; }
+.article-page .article-reader { width: 100%; }
+.article-page .article-body { padding-block: 1rem 2.5rem; }
+.article-page .article-body :is(p, li) { font-size: 1.125rem; line-height: 1.9; color: var(--color-ink-2); }
+.article-page .article-body h2 { margin-block: 3rem 1.25rem; font: 650 1.65rem/1.5 var(--font-heading); }
+.article-page .article-body h3 { font: 600 1.25rem/1.6 var(--font-heading); }
+.article-page .article-body blockquote { border-radius: 0 10px 10px 0; background: var(--color-accent-soft); }
+.article-page .article-body :is(th, td) { font-size: 0.9375rem; line-height: 1.7; }
+.article-page .article-body th { background: var(--color-paper-2); }
+.article-page .article-body pre { overflow-x: auto; padding: 1.25rem; border-radius: 10px; background: var(--color-paper-2); }
+@media(max-width:767px) { .project-page .news-stage-rail { grid-template-columns:repeat(2,minmax(0,1fr)); overflow-x:visible; } .project-page .news-stage-rail button { min-height:64px; } }
+.article-page .article-body code { font-size: 0.9em; }
+.article-page.article-page--essay .article-body p { max-width: 100%; font-size: 1.125rem; line-height: 1.95; letter-spacing: 0; }
+.article-page.article-page--essay .article-body p:first-child { max-width: 100%; font-size: 1.2rem; }
+.article-page.article-page--essay .article-body p:last-child { max-width: 100%; font-size: 1.125rem; }
+.article-page .reading-progress { top: var(--world-header-height, 4.8rem); }
+.article-page .reading-progress i { box-shadow: none; }
+.article-page .reading-signal { left: auto; right: max(1rem, calc(50% - 41rem)); width: 11rem; }
+.article-page .reading-signal span { font-size: 0.75rem; letter-spacing: 0.03em; }
+.article-page > footer { width: 100%; margin-top: 0; }
+
+@media (max-width: 75rem) {
+  .article-page .reading-signal { display: none; }
+}
+
+@media (max-width: 60rem) {
+  .project-page .project-title-row { grid-template-columns: minmax(0, 1fr) 12rem; gap: 1rem; }
+  .project-page :is(.case-depth-panel, .evidence-deliverables) { padding-left: 0; }
+  .profile-page .profile-hero { grid-template-columns: minmax(0, 1fr) 14rem; gap: 1rem; }
+  .profile-page .capability-system { display: block; }
+  .profile-page .capability-path { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .profile-page .capability-path::before,
+  .profile-page .capability-path > i { display: none; }
+  .career-page .career-trajectory { grid-template-columns: 1fr; }
+  .career-page .career-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 48rem) {
+  .project-page .project-title-row { display: block; position: relative; }
+  .project-page .project-mast-art { width: 7rem; margin: 0.5rem auto 0; }
+  .project-page .project-mast-facts { margin-top: 1rem; }
+  .project-page .project-mast-facts > div,
+  .project-page .project-mast-facts > div:first-child { padding: 1rem 0; }
+  .project-page > .demo-slot { margin-block: 2rem 3rem; }
+  .project-page .demo-copy { padding: 1rem; }
+  .project-page .demo-media-toolbar { padding: 0.75rem 1rem; }
+  .project-page :is(.case-study, .project-evidence, .sales-conversion) { padding-block: 2rem; }
+  .project-page .tender-stage-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); overflow-x: visible; }
+  .project-page .tender-stage-rail > div { border-bottom: 1px solid var(--color-rule); }
+  .project-page .tender-stage-rail > div:nth-last-child(-n+2) { border-bottom: 0; }
+  .project-page .tender-stage-rail > div:nth-child(odd) button { border-left: 0; }
+  .project-page .tender-stage-rail > div > i { display: none; }
+  .project-page .tender-field-drawer header { grid-template-columns: auto minmax(0, 1fr); gap: 0.5rem 0.75rem; }
+  .project-page .tender-field-drawer header h3 { grid-column: 2; }
+  .profile-page .profile-hero { display: flex; flex-direction: column; align-items: stretch; }
+  .profile-page .profile-portrait { width: min(15rem, 65%); align-self: center; }
+  .profile-page .profile-contact { gap: 0.5rem 1rem; }
+  .profile-page .capability-path { grid-template-columns: 1fr; }
+  .career-page .career-trajectory .career-entry { grid-template-columns: 1.5rem minmax(0, 1fr); gap: 0.5rem 0.75rem; }
+  .career-page .career-responsibilities > div { grid-template-columns: 1.5rem minmax(0, 1fr); gap: 0.5rem; }
+  .article-page .article-body :is(p, li),
+  .article-page.article-page--essay .article-body p { font-size: 1.0625rem; line-height: 1.9; }
+  .article-page .article-body h2 { font-size: 1.4rem; text-wrap: pretty; }
+}
+
+/* The illustrated three-step tour leads; detailed proof remains one click away. */
+main.project-page { padding-top: 1.25rem; }
+.project-page .project-mast .back-link { margin-bottom:.65rem; }
+.project-page .project-title-row { grid-template-columns:minmax(0,1fr) 10rem; gap:1.5rem; }
+.project-page .project-mast-art { width:10rem; }
+.project-page .project-title-copy .section-label { margin:0 0 .5rem; }
+main.project-page h1 { font-size:clamp(2rem,3.4vw,3.2rem); }
+.project-page .project-title-copy .lead { margin:.65rem 0 0; font-size:1rem; max-width:48rem; }
+.project-disclosure { margin:1rem 0; border:1px solid var(--color-rule-2); border-radius:12px; background:var(--color-paper); }
+.project-disclosure > summary { display:flex; justify-content:space-between; align-items:center; gap:1rem; min-height:76px; padding:1rem 1.25rem; cursor:pointer; list-style:none; }
+.project-disclosure > summary::-webkit-details-marker { display:none; }
+.project-disclosure > summary > span { display:grid; gap:.3rem; }
+.project-disclosure > summary b { color:var(--color-ink); font-size:1.0625rem; font-weight:600; }
+.project-disclosure > summary small { color:var(--color-muted); font-size:.8125rem; }
+.project-disclosure > summary > svg { flex-shrink:0; color:var(--color-accent); }
+.project-disclosure > summary:focus-visible { outline:3px solid var(--color-focus); outline-offset:4px; border-radius:12px; }
+.project-disclosure[open] > summary { border-bottom:1px solid var(--color-rule); }
+.project-disclosure[open] > summary > svg { transform:rotate(180deg); }
+.project-disclosure-content { padding:1.5rem; min-width:0; }
+.project-page .project-disclosure .demo-slot { margin:0 auto; width:min(65rem,100%); background:var(--color-paper); border:0; }
+.project-page .project-disclosure :is(.case-study,.project-evidence,.sales-conversion) { border-top:0; }
+.project-page .project-disclosure .project-mast-facts { margin-top:0; border-top:0; }
+@media(max-width:48rem) {
+  main.project-page { padding-top:1rem; }
+  .project-page .project-title-row { display:block; position:relative; padding-top:.25rem; }
+  .project-page .project-mast-art { position:absolute; width:4rem; right:0; top:-3.2rem; margin:0; }
+  .project-page .project-mast .back-link { margin-bottom:.5rem; }
+  main.project-page h1 { font-size:1.875rem; line-height:1.35; }
+  .project-page .project-title-copy .lead { font-size:.9375rem; line-height:1.8; }
+  .project-disclosure-content { padding:1rem .75rem; }
+  .project-disclosure > summary { padding:1rem; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) { padding-inline:0; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) > div { padding-left:0; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) button { grid-template-columns:2.6rem 1.6rem minmax(0,1fr); gap:.6rem; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) button > span { position:static; width:2.6rem; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) button > b { white-space:normal; }
+  .project-page .project-disclosure :is(.sales-route, .regulatory-stage-nav) > div > i { left:1.3rem; }
+  .project-page .project-disclosure .docs-route-track > div { padding-left:0; }
+  .project-page .project-disclosure .docs-route-track button { grid-template-columns:2.6rem 1.6rem minmax(0,1fr); gap:.5rem .6rem; }
+  .project-page .project-disclosure .docs-route-track button > span { position:static; grid-row:1 / span 2; width:2.6rem; }
+  .project-page .project-disclosure .docs-route-track button > b { white-space:normal; }
+  .project-page .project-disclosure .docs-route-track button > p { grid-column:2 / -1; }
+  .project-page .project-disclosure .docs-route-track > div > i { left:1.3rem; }
+}

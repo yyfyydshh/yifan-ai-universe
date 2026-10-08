@@ -1,0 +1,22 @@
+{
+  "tool": "built-in imagegen",
+  "assets": [
+    {
+      "path": "public/world/tender-yifan-guide-v1.webp",
+      "prompt": "Use case: identity-preserve. Transparent production sprite for the same 2D cartoon personal website. Reference image is the approved character; preserve his recognisable adult face, short spiky black hair, dark eyes, white loose T-shirt with small dark-green chest monogram, silver pendant, olive cargo pants and white/gray sneakers. Same crisp dark outlines, warm cel shading, adult cartoon proportions (not child/chibi), no photorealism, no extra accessories. ONE full-body figure, all limbs visible, genuinely transparent background, no furniture, labels, ground or scenery. Square composition, feet touching a consistent baseline at 94% canvas height, head around 8% canvas height. Change the pose: standing with a slight forward lean, knees relaxed, torso and face angled toward viewer's upper-left, a kind attentive expression, one arm reaching diagonally toward the upper-left with open palm as if guiding a sheet of paper into a printer; other hand relaxed near waist. A natural everyday gesture, no exaggerated waving."
+    },
+    {
+      "path": "public/world/tender-yifan-receive-v1.webp",
+      "prompt": "Use case: identity-preserve. Transparent production sprite for the same 2D cartoon personal website. Reference image is the approved character; preserve his recognisable adult face, short spiky black hair, dark eyes, white loose T-shirt with small dark-green chest monogram, silver pendant, olive cargo pants and white/gray sneakers. Same crisp dark outlines, warm cel shading, adult cartoon proportions (not child/chibi), no photorealism, no extra accessories. ONE full-body figure, all limbs visible, genuinely transparent background, no furniture, labels, ground or scenery. Square composition, feet touching a consistent baseline at 94% canvas height, head around 8% canvas height. Change the pose: standing upright, a small pleased smile, head angled slightly toward viewer's upper-left, both hands holding a single plain cream report sheet in front of his chest; fingers naturally grip its lower corners. Paper has a few muted green horizontal marks but no readable text. Relaxed shoulders, balanced standing stance. Same height and foot baseline as the standing guide pose."
+    },
+    {
+      "path": "public/world/tender-cat-reach-v1.webp",
+      "prompt": "Use case: identity-preserve. Reference is this website's approved black-and-white cow-pattern cat. Make one transparent crisp 2D cel-shaded cartoon sprite of the SAME cat, identical black patches, white face/body, pink ears, yellow-green eyes and dark outlines. Pose: standing on three paws, body in side view facing right, tail curved gently up, head looking upward to the right toward a moving paper, front right paw raised in a small curious reach. Keep natural feline proportions, not humanoid and not photorealistic. Full body and entire tail visible. No paper, furniture, labels, speech bubbles or scene. Square canvas, paws baseline at94% height, small transparent padding, clean alpha edges."
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGBA WebP; converted without cropping or resizing"
+}

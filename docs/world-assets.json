@@ -1,0 +1,612 @@
+{
+  "version": "world-v2",
+  "assets": [
+    {
+      "id": "sky-v3",
+      "path": "public/world/sky-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 57934,
+      "decoded_rgba_bytes": 6291456,
+      "alpha_bbox": null,
+      "sha256": "aff08ce4c74c074d6a2f45ac29b32dc40817b1d2d71065fec9272698118db063",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/sky-v3.png"
+    },
+    {
+      "id": "sky-night-v3",
+      "path": "public/world/sky-night-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 73172,
+      "decoded_rgba_bytes": 6291456,
+      "alpha_bbox": null,
+      "sha256": "724d1359dcb27cbffd559f2159767b2723b0fd1256cfbc0fe618fbe4695cbea6",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/sky-night-v3.png"
+    },
+    {
+      "id": "world-scene-open",
+      "path": "public/world/world-scene-open.webp",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 1772048,
+      "decoded_rgba_bytes": 6291456,
+      "alpha_bbox": [
+        0,
+        0,
+        1533,
+        1024
+      ],
+      "sha256": "4a7b4de5a33d4a2d9571f2ccfda11ab0fc5f22cdc4633708b15c0895f1a3cee1",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/world-scene-open.png",
+      "export_method": "Native 1536×1024 lossless WebP; no upscaling"
+    },
+    {
+      "id": "workshop-v2",
+      "path": "public/world/workshop-v2.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 111302,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        20,
+        790,
+        800
+      ],
+      "sha256": "4a25af93499f13b2e2ed7d37b7e21ffe93c132a7cf82357ffa0c0e1528290918",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/workshop-v2.png"
+    },
+    {
+      "id": "writing",
+      "path": "public/world/writing.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 133296,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        21,
+        785,
+        800
+      ],
+      "sha256": "50bf40cfc2de399fe198e34687b51b097f59058a4f2e08624c5a450306335b24",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/writing.png"
+    },
+    {
+      "id": "music",
+      "path": "public/world/music.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 127438,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        26,
+        790,
+        760
+      ],
+      "sha256": "b09d2c1976d040ba018f85399924ea3d8eee2cd21d3e2ee373b4e314e403e9c5",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/music.png"
+    },
+    {
+      "id": "games",
+      "path": "public/world/games.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 126156,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        16,
+        788,
+        800
+      ],
+      "sha256": "372375421c5ab62fe8a83a6f31ff7e497f180991b2b606f6f51bd4c48c7d9be4",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/games.png"
+    },
+    {
+      "id": "cinema",
+      "path": "public/world/cinema.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 119006,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        17,
+        16,
+        792,
+        791
+      ],
+      "sha256": "710f24b147e2dbadf17e21e45cfab0f3af0913212717144243ed0f73809ae9c6",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cinema.png"
+    },
+    {
+      "id": "thinking",
+      "path": "public/world/thinking.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 105514,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        11,
+        783,
+        785
+      ],
+      "sha256": "19b15e87a05d7a12982b7ab2c4a2d8d30436e4707ea5f476b5f300d7fe8082f4",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/thinking.png"
+    },
+    {
+      "id": "stuff",
+      "path": "public/world/stuff.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 115446,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        26,
+        784,
+        800
+      ],
+      "sha256": "ba2b36daf1dcb2487dee499e8c276f88211fa8679380ff5048897327d2f6d777",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/stuff.png"
+    },
+    {
+      "id": "yifan-cartoon-v2",
+      "path": "public/world/yifan-cartoon-v2.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 73076,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        16,
+        21,
+        723,
+        800
+      ],
+      "sha256": "339ea78654107580d90c462e2c059145112891fa7b5646dfb7e0c0868200692a",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v1/yifan-cartoon-v2.png"
+    },
+    {
+      "id": "yifan-look",
+      "path": "public/world/yifan-look.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 71466,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        67,
+        29,
+        686,
+        800
+      ],
+      "sha256": "eb7d62b698c552b12e3c098fda38b5270e5005282e5d9b7844f44fcdbb4861bc",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/yifan-look.png"
+    },
+    {
+      "id": "yifan-wave",
+      "path": "public/world/yifan-wave.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 77796,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        173,
+        29,
+        767,
+        800
+      ],
+      "sha256": "d1ac235a55d396a7b8e50b7ca037f8d60ffab8b307dbe867ff9c15a38bf477a2",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/yifan-wave.png"
+    },
+    {
+      "id": "cat-cartoon",
+      "path": "public/world/cat-cartoon.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 43262,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        47,
+        34,
+        774,
+        723
+      ],
+      "sha256": "a26cf6bf964c568af3620bb69eceef6acdd57e0908ad8db9462ae1fc7607a46e",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-cartoon.png"
+    },
+    {
+      "id": "cat-awake",
+      "path": "public/world/cat-awake.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 47566,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        47,
+        33,
+        775,
+        754
+      ],
+      "sha256": "9d38dbf85e5649125b786ebe93b412016a32cdebd8c1e1de1630bfc2c6be5d4f",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-awake.png"
+    },
+    {
+      "id": "cat-stretch",
+      "path": "public/world/cat-stretch.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 50216,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        33,
+        780,
+        723
+      ],
+      "sha256": "85df67da5b0e467bb62151587a5229a363408ac3db1f1f8beceab2271b0e32c7",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-stretch.png"
+    },
+    {
+      "id": "folder-v2",
+      "path": "public/world/folder-v2.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 44552,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        26,
+        125,
+        776,
+        764
+      ],
+      "sha256": "e9b2eeaeb32455b4dd3972c64286ebed41c8ac6ba2fbc2597a39e1f4187f9983",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/folder-v2.png"
+    },
+    {
+      "id": "mobile-ground",
+      "path": "public/world/mobile-ground.webp",
+      "width": 800,
+      "height": 533,
+      "mode": "RGBA",
+      "bytes": 54476,
+      "decoded_rgba_bytes": 1705600,
+      "alpha_bbox": [
+        11,
+        4,
+        771,
+        520
+      ],
+      "sha256": "9817f46f76946f3142f3d124b9aa161a922fa87d7508f7f55bb16a8a7a996426",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/mobile-ground.png"
+    },
+    {
+      "id": "tour-computer",
+      "path": "public/world/tour-computer.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 85690,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        11,
+        0,
+        790,
+        800
+      ],
+      "sha256": "41ce366c78cd9ceac4025197f755100ced417f595c8dcad89237e682c6771366",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/tour-computer.png"
+    },
+    {
+      "id": "tour-notebook",
+      "path": "public/world/tour-notebook.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 77626,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        21,
+        94,
+        789,
+        754
+      ],
+      "sha256": "6580b40c28dd3f2a8c56fa97197e255fee4e27cde271aa4f63840d4805da16fd",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/tour-notebook.png"
+    },
+    {
+      "id": "studio-globe",
+      "path": "public/world/studio-globe.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 90460,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        21,
+        0,
+        716,
+        769
+      ],
+      "sha256": "d73dfa2c2930d38f305a55f55f8f9e2fa1650d5774ca2b6133accc39457e129e",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-globe.png"
+    },
+    {
+      "id": "studio-chat",
+      "path": "public/world/studio-chat.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 89348,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        42,
+        790,
+        762
+      ],
+      "sha256": "c950798899b1c561bc37f04c626ec09c6d114ec21d68c8fc367a18327bac71db",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-chat.png"
+    },
+    {
+      "id": "studio-docs",
+      "path": "public/world/studio-docs.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 83052,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        18,
+        767,
+        762
+      ],
+      "sha256": "79d742c344b821cef77ea15d64e58ef02ddedbdd41ede8569dfd9f79392c9e36",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-docs.png"
+    },
+    {
+      "id": "studio-shield",
+      "path": "public/world/studio-shield.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 70586,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        77,
+        757,
+        735
+      ],
+      "sha256": "807a62eb1c147c9752339d9e221a6ce3702d881946f6c09779d6a5624ba2cf28",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-shield.png"
+    },
+    {
+      "id": "studio-scanner",
+      "path": "public/world/studio-scanner.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 66032,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        28,
+        29,
+        790,
+        800
+      ],
+      "sha256": "4544bd38f7f8455209089aff1178c5a3885d42a2f74e434c8cf1ca68c8942d98",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-scanner.png"
+    },
+    {
+      "id": "studio-radio",
+      "path": "public/world/studio-radio.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 84688,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        34,
+        796,
+        766
+      ],
+      "sha256": "6fd500acca984f656dde3cd99677b3bf3180fd843c11309ba65e8eb282c1979f",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-radio.png"
+    },
+    {
+      "id": "studio-pen",
+      "path": "public/world/studio-pen.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 70084,
+      "decoded_rgba_bytes": 2560000,
+      "alpha_bbox": [
+        0,
+        30,
+        786,
+        723
+      ],
+      "sha256": "65335eccfd2e1e5d5eb848e75c140a9237bac744d766d2988b143f318968df89",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-pen.png"
+    },
+    {
+      "id": "studio-room-integrated",
+      "path": "public/world/studio-room-integrated.webp",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 356762,
+      "decoded_rgba_bytes": 6291456,
+      "alpha_bbox": null,
+      "sha256": "1ee759b6d1028a38b555527a424d825091632a69927e5e72b36d65cb8e979939",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/studio-room-integrated.png"
+    },
+    {
+      "id": "yifan-scene-idle",
+      "path": "public/world/yifan-scene-idle.webp",
+      "width": 389,
+      "height": 389,
+      "mode": "RGBA",
+      "bytes": 85496,
+      "decoded_rgba_bytes": 605284,
+      "alpha_bbox": [
+        83,
+        13,
+        335,
+        389
+      ],
+      "sha256": "5421ade6fcd7d0ea41799f322d6b2ad442d6ee567f19cc836c37bcc3dae4655c",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v1/yifan-cartoon-v2.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    },
+    {
+      "id": "yifan-scene-look",
+      "path": "public/world/yifan-scene-look.webp",
+      "width": 389,
+      "height": 389,
+      "mode": "RGBA",
+      "bytes": 85880,
+      "decoded_rgba_bytes": 605284,
+      "alpha_bbox": [
+        83,
+        13,
+        335,
+        389
+      ],
+      "sha256": "29278af7c9d70f1ba6d8a157676bab915a73dc8d930d184760c4432be2da4b47",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/yifan-look.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    },
+    {
+      "id": "yifan-scene-wave",
+      "path": "public/world/yifan-scene-wave.webp",
+      "width": 389,
+      "height": 389,
+      "mode": "RGBA",
+      "bytes": 90572,
+      "decoded_rgba_bytes": 605284,
+      "alpha_bbox": [
+        82,
+        13,
+        335,
+        389
+      ],
+      "sha256": "55c556a7f814651cc3a2bad6a71f2909eaa6fe76ed94743886fafcc3e11d9277",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/yifan-wave.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    },
+    {
+      "id": "cat-scene-idle",
+      "path": "public/world/cat-scene-idle.webp",
+      "width": 197,
+      "height": 197,
+      "mode": "RGBA",
+      "bytes": 20724,
+      "decoded_rgba_bytes": 155236,
+      "alpha_bbox": [
+        10,
+        54,
+        193,
+        160
+      ],
+      "sha256": "2a4007cc488d726d6cfe774e35b990959a5619a4576afda0811cda14e76fe87f",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-cartoon.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    },
+    {
+      "id": "cat-scene-awake",
+      "path": "public/world/cat-scene-awake.webp",
+      "width": 197,
+      "height": 197,
+      "mode": "RGBA",
+      "bytes": 22068,
+      "decoded_rgba_bytes": 155236,
+      "alpha_bbox": [
+        10,
+        54,
+        193,
+        175
+      ],
+      "sha256": "23cc5e82fd8c7b16675f3d1098733ba2c2f41e720d8ff7312708280ac61c1fae",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-awake.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    },
+    {
+      "id": "cat-scene-stretch",
+      "path": "public/world/cat-scene-stretch.webp",
+      "width": 197,
+      "height": 197,
+      "mode": "RGBA",
+      "bytes": 21826,
+      "decoded_rgba_bytes": 155236,
+      "alpha_bbox": [
+        5,
+        49,
+        194,
+        158
+      ],
+      "sha256": "c7cb4b1ce1c2df1845700f64d9d222ebf9203506ef545dff22d56ebcdfcda876",
+      "source": "built-in image_gen; user references and approved adult cartoon direction",
+      "source_path": "references/drafts/world-v2/cat-stretch.png",
+      "export_method": "Lanczos resize from preserved approved PNG; lossless WebP; 0.96 texels per logical world unit"
+    }
+  ],
+  "total_bytes": 4604616,
+  "decoded_rgba_bytes": 88032984,
+  "note": "Inventory spans all routes and states, not simultaneous loading. Decoded size is a base RGBA estimate, not measured GPU allocation. Desktop canvas loads only the integrated scene and six density-matched actor states. Sky/room/mobile/preview/project icons are DOM images. Native scene is 1536×1024, not 4K; originals remain preserved."
+}

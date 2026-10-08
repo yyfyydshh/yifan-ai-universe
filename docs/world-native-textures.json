@@ -1,0 +1,61 @@
+{
+  "encoding": "lossless WebP; no resize",
+  "assets": [
+    {
+      "source": "references/drafts/world-v4/extract-central.png",
+      "path": "public/world/v6-native-central.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 976916
+    },
+    {
+      "source": "references/drafts/world-v4/extract-films.png",
+      "path": "public/world/v6-native-films.webp",
+      "width": 1309,
+      "height": 1201,
+      "bytes": 703394
+    },
+    {
+      "source": "references/drafts/world-v4/extract-games.png",
+      "path": "public/world/v6-native-games.webp",
+      "width": 1211,
+      "height": 1299,
+      "bytes": 1119786
+    },
+    {
+      "source": "references/drafts/world-v4/extract-writing.png",
+      "path": "public/world/v6-native-writing.webp",
+      "width": 1225,
+      "height": 1284,
+      "bytes": 1061728
+    },
+    {
+      "source": "references/drafts/world-v4/extract-music.png",
+      "path": "public/world/v6-native-music.webp",
+      "width": 1309,
+      "height": 1201,
+      "bytes": 908654
+    },
+    {
+      "source": "references/drafts/world-v4/extract-work-clean.png",
+      "path": "public/world/v6-native-work-clean.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 858204
+    },
+    {
+      "source": "references/drafts/world-v4/extract-thoughts-clean.png",
+      "path": "public/world/v6-native-thoughts-clean.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 931462
+    },
+    {
+      "source": "references/drafts/world-v4/extract-stuff.png",
+      "path": "public/world/v6-native-stuff.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 826560
+    }
+  ]
+}

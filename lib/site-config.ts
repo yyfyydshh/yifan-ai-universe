@@ -6,9 +6,9 @@ const publicBasePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, 
 const resolvedURL = configuredURL || developmentURL;
 
 export const siteConfig = {
-  name: "杨逸凡｜AI Capability Universe",
+  name: "杨逸凡的世界",
   shortName: "杨逸凡",
-  description: "AI Skill / Agent 工作流搭建、Vibe Coding 交付与 AI 应用产品运营作品集。",
+  description: "我做过的，写过的，想过的，以及还没做完的，都在这里。杨逸凡的作品、文字与个人创作世界。",
   url: new URL(resolvedURL.endsWith("/") ? resolvedURL : `${resolvedURL}/`),
   email: "1693416144@qq.com",
   phone: "13028495851",

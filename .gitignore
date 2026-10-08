@@ -58,3 +58,8 @@ next-env.d.ts
 /test-results/
 /tmp/
 /videos/
+
+# Python helper caches
+__pycache__/
+*.py[cod]
+/tests/e2e/qa/world/

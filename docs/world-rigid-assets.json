@@ -1,0 +1,288 @@
+[
+  {
+    "name": "work",
+    "source": "references\\drafts\\world-v3\\rigid-work.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      780,
+      780
+    ],
+    "bytes": 527924
+  },
+  {
+    "name": "writing",
+    "source": "references\\drafts\\world-v3\\rigid-writing.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      710,
+      710
+    ],
+    "bytes": 439680
+  },
+  {
+    "name": "music",
+    "source": "references\\drafts\\world-v3\\rigid-music.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      700,
+      700
+    ],
+    "bytes": 408196
+  },
+  {
+    "name": "games",
+    "source": "references\\drafts\\world-v3\\rigid-games.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      700,
+      700
+    ],
+    "bytes": 425500
+  },
+  {
+    "name": "films",
+    "source": "references\\drafts\\world-v3\\rigid-films.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      660,
+      660
+    ],
+    "bytes": 378730
+  },
+  {
+    "name": "thoughts",
+    "source": "references\\drafts\\world-v3\\rigid-thoughts.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      730,
+      730
+    ],
+    "bytes": 437126
+  },
+  {
+    "name": "stuff",
+    "source": "references\\drafts\\world-v3\\rigid-stuff.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      670,
+      670
+    ],
+    "bytes": 352496
+  },
+  {
+    "name": "central",
+    "source": "references\\drafts\\world-v3\\rigid-central.png",
+    "native": [
+      1536,
+      1024
+    ],
+    "export": [
+      1070,
+      713
+    ],
+    "bytes": 478344
+  },
+  {
+    "name": "stair",
+    "source": "references\\drafts\\world-v3\\rigid-stair.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      156,
+      156
+    ],
+    "bytes": 5854
+  },
+  {
+    "name": "person-idle",
+    "source": "references\\drafts\\world-v1\\yifan-cartoon-v2.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      704,
+      704
+    ],
+    "bytes": 235096
+  },
+  {
+    "name": "person-look",
+    "source": "references\\drafts\\world-v2\\yifan-look.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      704,
+      704
+    ],
+    "bytes": 237342
+  },
+  {
+    "name": "person-wave",
+    "source": "references\\drafts\\world-v2\\yifan-wave.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      704,
+      704
+    ],
+    "bytes": 248868
+  },
+  {
+    "name": "cat-idle",
+    "source": "references\\drafts\\world-v2\\cat-cartoon.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      304,
+      304
+    ],
+    "bytes": 41472
+  },
+  {
+    "name": "cat-awake",
+    "source": "references\\drafts\\world-v2\\cat-awake.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      304,
+      304
+    ],
+    "bytes": 43452
+  },
+  {
+    "name": "cat-stretch",
+    "source": "references\\drafts\\world-v2\\cat-stretch.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      304,
+      304
+    ],
+    "bytes": 42626
+  },
+  {
+    "name": "reaction-work",
+    "source": "references\\drafts\\world-v3\\reaction-work.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 327736
+  },
+  {
+    "name": "reaction-writing",
+    "source": "references\\drafts\\world-v3\\reaction-writing.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 327882
+  },
+  {
+    "name": "reaction-music",
+    "source": "references\\drafts\\world-v3\\reaction-music.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 338484
+  },
+  {
+    "name": "reaction-games",
+    "source": "references\\drafts\\world-v3\\reaction-games.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 335230
+  },
+  {
+    "name": "reaction-films",
+    "source": "references\\drafts\\world-v3\\reaction-films.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 366568
+  },
+  {
+    "name": "reaction-thoughts",
+    "source": "references\\drafts\\world-v3\\reaction-thoughts.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 325502
+  },
+  {
+    "name": "reaction-stuff",
+    "source": "references\\drafts\\world-v3\\reaction-stuff.png",
+    "native": [
+      1254,
+      1254
+    ],
+    "export": [
+      790,
+      790
+    ],
+    "bytes": 315924
+  }
+]

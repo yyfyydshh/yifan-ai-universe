@@ -1,0 +1,22 @@
+{
+  "mode": "built-in image_gen",
+  "specs": [
+    {
+      "key": "hotNewsDesk",
+      "prompt": "Use case: precise-object-edit. Asset: clean background plate for a 2D cartoon interactive website. Input is design reference only. Re-create just the warm wooden tabletop and softly lit workshop surroundings from this reference, in the SAME palette and hand-drawn adult cartoon linework. Wide landscape 3:2 view. Wooden tabletop fills bottom 55 percent, back edge around y45 percent. Upper background is pale cream soft sky-lit wall with distant blurred green vines/plants confined to outer left/right edges and small wooden window frame at far right. A wide central clear area for HTML radio/papers/person layers. Remove ALL foreground people, cats, radio, newspaper, loose papers, trays, pens, text, logos, webpage chrome and controls. No furniture objects on desk. No labels. Soft warm diffuse daytime light, no hard shadow cast from missing objects. The table is grounded, parallel perspective in the reference, not photographic, no exaggerated wood noise. Crisp 2D cartoon artwork, no realistic 3D. This plate is only atmosphere, not a webpage screenshot.",
+      "refs": [
+        "D:\\AI\\CVme\\.showcase-runs\\yifan-ai-universe\\hot-news-brief\\ui\\references\\locked\\radio-v1\\page.png"
+      ],
+      "transparent": false
+    },
+    {
+      "key": "hotNewsTune",
+      "prompt": "Use case: identity-preserve. Asset: full body transparent 2D cartoon person sprite. Input1 is exact owner identity and clothes; Input2 shows intended action in the desktop scene. Generate ONLY the same ADULT young man, black spiky hair, white IN T-shirt, necklace, olive cargo trousers and white sneakers. He stands, leans lightly forward, looks toward his right with friendly attentive smile and extends HIS LEFT hand to the RIGHT of the image at waist height to turn a radio tuning knob (radio is NOT included). Keep adult cartoon feel, same face, linework, colors, clean cel shading as input1; no child/chibi proportions. Entire body and both feet intact, feet at similar ground baseline, slim natural limbs, no crossed torso/arm penetration. Transparent background. No radio, cat, furniture, other people, props, writing or labels beyond the existing small IN shirt mark. Leave 8 percent clear padding. This is an isolated independently layered interaction pose.",
+      "refs": [
+        "D:\\AI\\CVme\\yifan-ai-universe\\public\\world\\tender-yifan-guide-v1.webp",
+        "D:\\AI\\CVme\\.showcase-runs\\yifan-ai-universe\\hot-news-brief\\ui\\references\\locked\\radio-v1\\page.png"
+      ],
+      "transparent": true
+    }
+  ]
+}

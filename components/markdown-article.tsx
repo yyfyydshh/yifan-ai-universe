@@ -43,7 +43,7 @@ export function MarkdownArticle({ source }: { source: string }) {
       while (i < lines.length && lines[i].trim().startsWith("|")) { rows.push(lines[i].split("|").slice(1, -1).map(x => x.trim())); i++; }
       const clean = rows.filter(row => !row.every(cell => /^:?-+:?$/.test(cell)));
       const [head, ...body] = clean;
-      out.push(<div className="article-table-wrap" key={`table-${i}`}><table><thead><tr>{head.map(cell => <th key={cell}>{cell}</th>)}</tr></thead><tbody>{body.map((row, r) => <tr key={r}>{row.map((cell, c) => <td key={c}>{inline(cell)}</td>)}</tr>)}</tbody></table></div>); continue;
+      out.push(<div className="article-table-block" key={`table-${i}`}><p className="article-table-hint">左右滑动表格，查看完整内容 ↔</p><div className="article-table-wrap" role="region" aria-label="可左右滚动的对照表" tabIndex={0}><table><thead><tr>{head.map(cell => <th key={cell}>{cell}</th>)}</tr></thead><tbody>{body.map((row, r) => <tr key={r}>{row.map((cell, c) => <td key={c}>{inline(cell)}</td>)}</tr>)}</tbody></table></div></div>); continue;
     }
     const paragraph = [line]; i++;
     while (i < lines.length && lines[i].trim() && !/^(## |# |> |- |\|)/.test(lines[i].trim())) { paragraph.push(lines[i].trim()); i++; }

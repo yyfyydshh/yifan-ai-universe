@@ -632,10 +632,10 @@ export const projects: Project[] = [
   {
     slug: "docs-system",
     index: "03",
-    title: "八爪鱼产品文档站 0→1",
-    shortTitle: "产品文档站 0→1",
+    title: "八爪鱼产品文档站",
+    shortTitle: "产品文档站",
     category: "核心系统",
-    tagline: "将迁移、校验、发布与维护连接成可复用的知识工程闭环。",
+    tagline: "把产品说明、采集教程与开放能力，整理成一本好查、好读的在线手册。",
     mastFacts: {
       input: "新站、旧站与维护任务",
       judgment: "路径选择与发布质量门",
@@ -648,7 +648,7 @@ export const projects: Project[] = [
     outputs: ["产品文档站", "迁移 SOP", "检查清单", "跨产品线经验包"],
     reuse: "经验包已由另一条 RPA 产品线使用，并支持其文档站从零上线。",
     tags: ["Knowledge", "MDX", "Ops"],
-    github: "https://github.com/yyfyydshh/mintlify-docs-site-sop",
+    github: "https://github.com/bazhuayu-team/bazhuayu-docs",
     orbit: "hero",
     icon: "book",
     visualMode: "knowledge-system",

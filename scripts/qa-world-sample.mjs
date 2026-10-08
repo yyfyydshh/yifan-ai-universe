@@ -1,0 +1,18 @@
+import { chromium } from '@playwright/test';
+import fs from 'node:fs/promises';
+await fs.mkdir('qa/world',{recursive:true});
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1536,height:1024}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:3010/',{waitUntil:'networkidle'});
+await page.locator('[data-renderer="ready"]').waitFor({timeout:90000});
+await page.screenshot({path:'qa/world/sample-desktop.png'});
+await page.getByRole('button',{name:'工作室，打开预览'}).click();
+await page.getByRole('dialog').waitFor();
+await page.screenshot({path:'qa/world/sample-preview.png'});
+await page.keyboard.press('Escape');
+const view=page.locator('.world-viewport');const before=await view.getAttribute('data-camera');
+await page.mouse.move(1300,880);await page.mouse.down();await page.mouse.move(1120,800,{steps:15});await page.mouse.up();
+await page.waitForTimeout(700);const after=await view.getAttribute('data-camera');
+console.log(JSON.stringify({errors,before,after}));
+await browser.close();

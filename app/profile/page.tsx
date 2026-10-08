@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CapabilitySystem } from "@/components/capability-system";
 import { buildPageMetadata, publicPath } from "@/lib/site-config";
 
@@ -19,10 +20,23 @@ const capabilities = [
 export default function ProfilePage() {
   return (
     <main className="page-shell profile-page">
-      <header className="profile-hero"><div><p className="section-label">PROFILE / ARCHIVE</p><h1>杨逸凡</h1><p>2 年+ SaaS 技术支持、产品运营与团队管理经验。以产品意识理解业务，以 AI 能力加速验证；把一线问题推进为可落地方案，并沉淀为可运行、可验证、可复用的产品能力。</p></div><div className="profile-contact"><a href="mailto:1693416144@qq.com">1693416144@qq.com</a><span>深圳</span><a href={publicPath("/resume/杨逸凡_AI工作流方向_简历.pdf")} target="_blank">下载简历 PDF ↗</a></div></header>
+      <Link href="/" className="back-link">← 回到我的世界</Link>
+      <header className="profile-hero">
+        <div className="profile-introduction">
+          <p className="section-label">关于我 / ABOUT YIFAN</p>
+          <h1>你好，我是杨逸凡。</h1>
+          <p>2 年+ SaaS 技术支持、产品运营与团队管理经验。以产品意识理解业务，以 AI 能力加速验证；把一线问题推进为可落地方案，并沉淀为可运行、可验证、可复用的产品能力。</p>
+          <div className="profile-contact">
+            <span>深圳</span>
+            <a href="mailto:1693416144@qq.com">1693416144@qq.com</a>
+            <a href={publicPath("/resume/杨逸凡_AI工作流方向_简历.pdf")} target="_blank" rel="noreferrer">下载简历 PDF ↗</a>
+          </div>
+        </div>
+        <Image className="profile-portrait" src={publicPath("/world/yifan-cartoon-v2.webp")} alt="杨逸凡的卡通形象：白色上衣，橄榄绿工装裤，闲坐着看向身旁。" width={512} height={512} sizes="(max-width: 48rem) 60vw, 320px" loading="eager" />
+      </header>
       <CapabilitySystem capabilities={capabilities} />
       <section className="profile-record"><div><h2>教育背景</h2><p>湖南工学院｜物联网工程｜本科</p><span>2020.10—2024.06 · 专业排名前 20%</span></div><div><h2>证书</h2><p>大学英语四级｜全国计算机二级｜普通话二级甲等</p></div></section>
-      <div className="page-actions"><Link href="/career">查看完整职业轨迹 →</Link><Link href="/work">进入项目宇宙 →</Link></div>
+      <div className="page-actions"><Link href="/career">查看完整职业轨迹 →</Link><Link href="/work">去工作室看看 →</Link></div>
     </main>
   );
 }

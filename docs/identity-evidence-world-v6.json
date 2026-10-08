@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "world-v6",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "scope_note": "All four homepage states touched by this iteration. Other pages receive functional regression only; their earlier visual evidence is archived separately. Reference fidelity follows the explicit v6 implementation contract, not a pixel-exact decomposition claim.",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 1000
+    },
+    "ultrawide": {
+      "width": 2200,
+      "height": 1200
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "fidelity_ledger": "docs/home-archipelago-v6.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "self-blind",
+  "final_status": "pass",
+  "historical_evidence": "docs/identity-evidence-world-v2.json",
+  "sections": [
+    {
+      "id": "home-compact",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v6/user-island-source.png",
+        "sha256": "6f633084f4eb641e89c84b307998e62225afdef5a042d3e1b7a98e39a2d09d22"
+      },
+      "render_contract": "docs/home-archipelago-v6.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "正式首页同一个世界的状态；各状态分别截图审查，复用资源与刚性空间约束。"
+      },
+      "captures": {
+        "desktop": "qa/world/home-v6/1440-0.png",
+        "ultrawide": "qa/world/home-v6/2200-0.png",
+        "mobile": "qa/world/home-v6/390-0.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-expanded",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v6/user-island-source.png",
+        "sha256": "6f633084f4eb641e89c84b307998e62225afdef5a042d3e1b7a98e39a2d09d22"
+      },
+      "render_contract": "docs/home-archipelago-v6.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "正式首页同一个世界的状态；各状态分别截图审查，复用资源与刚性空间约束。"
+      },
+      "captures": {
+        "desktop": "qa/world/home-v6/1440-1.png",
+        "ultrawide": "qa/world/home-v6/2200-1.png",
+        "mobile": "qa/world/home-v6/390-1.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-focus",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v6/user-island-source.png",
+        "sha256": "6f633084f4eb641e89c84b307998e62225afdef5a042d3e1b7a98e39a2d09d22"
+      },
+      "render_contract": "docs/home-archipelago-v6.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "正式首页同一个世界的状态；各状态分别截图审查，复用资源与刚性空间约束。"
+      },
+      "captures": {
+        "desktop": "qa/world/home-v6/1440-focus.png",
+        "ultrawide": "qa/world/home-v6/2200-focus.png",
+        "mobile": "qa/world/home-v6/390-focus.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-night",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v6/user-island-source.png",
+        "sha256": "6f633084f4eb641e89c84b307998e62225afdef5a042d3e1b7a98e39a2d09d22"
+      },
+      "render_contract": "docs/home-archipelago-v6.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "正式首页同一个世界的状态；各状态分别截图审查，复用资源与刚性空间约束。"
+      },
+      "captures": {
+        "desktop": "qa/world/home-v6/1440-night.png",
+        "ultrawide": "qa/world/home-v6/2200-night.png",
+        "mobile": "qa/world/home-v6/390-night.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

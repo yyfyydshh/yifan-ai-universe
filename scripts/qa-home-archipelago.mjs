@@ -1,0 +1,93 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const origin=process.env.QA_ORIGIN||'http://127.0.0.1:3010',out=process.env.QA_OUT||'qa/world/home-v6';
+await fs.mkdir(out,{recursive:true});
+const browser=await chromium.launch(),page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));
+const check=(v,label)=>{assert.ok(v,label);checks.push(label);};
+const ready=()=>page.waitForFunction(()=>window.islandReview?.getReady(),{timeout:30000});
+const progress=async n=>{await page.evaluate(n=>islandReview.setProgress(n),n);await page.waitForTimeout(120);};
+await page.goto(origin+'/');await ready();
+check(await page.locator('.island-home').count()===1,'New world is the real homepage');
+check(await page.locator('.world-header').count()===0,'No duplicate header');
+check(await page.locator('h1').count()===1,'One main identity heading');
+check(!await page.locator('.world-footer').isVisible(),'No footer pushes out the world');
+const t=await page.locator('[data-original]').getAttribute('transform');await page.waitForTimeout(600);
+check(t!==await page.locator('[data-original]').getAttribute('transform'),'Compact source floats');
+await page.getByRole('button',{name:'暂停漂浮',exact:true}).click();await page.evaluate(()=>islandReview.setMotionTime(0));
+await page.mouse.move(1,1);
+for(const n of [0,.025,.05,.075,.1,.125,.15,.175,.2,.23,.35,.5,.75,1]){await progress(n);await page.screenshot({path:out+'/phase-'+n+'.png'});}
+const a=await page.evaluate(()=>islandReview.getPositions());await page.evaluate(()=>islandReview.setMotionTime(3000));
+const b=await page.evaluate(()=>islandReview.getPositions());
+check(a.every((p,i)=>Math.hypot(p[0]-b[i][0],p[1]-b[i][1])>1),'Every body drifts independently');
+check(new Set(await page.evaluate(()=>islandReview.pieces.map(b=>b.float[1]))).size===8,'Eight individual float rhythms');
+await page.evaluate(()=>islandReview.setMotionTime(0));
+await page.mouse.wheel(0,2000);await page.waitForTimeout(150);
+check(Math.abs((await page.locator('.stage').boundingBox()).y)<1,'End of scroll keeps stage fixed');
+check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No horizontal page overflow');
+const cursor=await page.locator('.island-home').evaluate(n=>getComputedStyle(n).cursor);
+check(cursor.includes('data:image/svg+xml'),'Paper airplane cursor');
+await page.locator('[data-zone=work] .hotspot').click();
+await page.waitForTimeout(1700);
+check(new URL(page.url()).pathname==='/','First click focuses without leaving home');
+check(await page.locator('#preview-title').innerText()==='工作室','Focus opens correct introduction');
+check(await page.locator('[data-reaction]').getAttribute('data-reaction')==='work','Work action is loaded');
+check(await page.locator('#unfocus').evaluate(n=>n===document.activeElement),'Focus moves to preview controls');
+await page.keyboard.press('Escape');await page.waitForTimeout(1700);
+check(await page.locator('[data-zone=work]').evaluate(n=>n===document.activeElement),'Escape restores island keyboard focus');
+check(await page.locator('[data-companions]').getAttribute('data-companions')==='idle','Closing returns companions to idle');
+const regionTitles={work:'工作室',writing:'写作小屋',music:'声音房',games:'游戏桌',films:'放映室',thoughts:'思考山丘',stuff:'杂物间'};
+for(const [id,name]of Object.entries(regionTitles)){
+ await page.evaluate(id=>islandReview.select(id),id);await page.waitForTimeout(1700);
+ check(await page.locator('#preview-title').innerText()===name,'Focus '+id);
+ check(await page.locator('[data-companions]').getAttribute('data-companions')===id,'Distinct companions '+id);
+ check((await page.locator('[data-reaction]').getAttribute('href')).endsWith('reaction-'+id+'.webp'),'Distinct action image '+id);
+ check(await page.locator('#enter-island').getAttribute('href')==='/'+id,'Content CTA '+id);
+ const d=await page.evaluate(id=>{const r=islandReview.getBounds().find(b=>b.id===id).rect,i=islandReview.pieces.findIndex(b=>b.id===id),p=islandReview.getPositions()[i],c=islandReview.getCamera();return Math.hypot(r[0]+r[2]/2+p[0]-c[0]-c[2]/2,r[1]+r[3]/2+p[1]-c[1]-c[3]/2);},id);
+ check(d<30,'Selected island centered '+id);
+ await page.screenshot({path:out+'/focus-'+id+'.png'});
+}
+await page.evaluate(()=>islandReview.unselect(false));await page.waitForTimeout(1700);
+const views=[];
+for(const viewport of [{width:320,height:740},{width:390,height:844},{width:768,height:1024},{width:1440,height:1000},{width:2200,height:1200}]){
+ await page.setViewportSize(viewport);
+ for(const n of [0,1]){
+  await progress(n);
+  const info=await page.evaluate(()=>{
+   const s=document.querySelector('#scene').getBoundingClientRect(),c=islandReview.getCamera(),scale=Math.min(s.width/c[2],s.height/c[3]);
+   const points=islandReview.getBounds().map((b,i)=>{const p=islandReview.getPositions()[i],r=b.rect;return {id:b.id,left:s.left+(s.width-c[2]*scale)/2+(r[0]+p[0]-c[0])*scale,top:s.top+(s.height-c[3]*scale)/2+(r[1]+p[1]-c[1])*scale,right:s.left+(s.width-c[2]*scale)/2+(r[0]+p[0]+r[2]-c[0])*scale,bottom:s.top+(s.height-c[3]*scale)/2+(r[1]+p[1]+r[3]-c[1])*scale};});
+   const targets=[...document.querySelectorAll('.hotspot')].map(n=>{const r=n.getBoundingClientRect();return[r.width,r.height];});
+   const labels=[...document.querySelectorAll('[data-zone]')].map(n=>({name:n.getAttribute('aria-label')}));
+   return{points,targets,labels,overflow:document.documentElement.scrollWidth>innerWidth,width:innerWidth,height:innerHeight};
+  });
+  check(!info.overflow,'No overflow '+viewport.width+'/'+n);
+  check(info.targets.every(r=>r[0]>=43.9&&r[1]>=43.9),'44px island targets '+viewport.width+'/'+n);
+  check(info.labels.length===7&&info.labels.every(r=>r.name),'Seven named island controls '+viewport.width+'/'+n);
+  if(n===1)check(info.points.every(r=>r.left>=-2&&r.right<=viewport.width+2&&r.top>=0&&r.bottom<=viewport.height-40),'All expanded island tips fit '+viewport.width);
+  await page.screenshot({path:out+'/'+viewport.width+'-'+n+'.png'});views.push({...viewport,progress:n,...info});
+ }
+ await page.evaluate(()=>islandReview.select('films'));await page.waitForTimeout(1600);
+ check(await page.locator('#enter-island').isVisible(),'Usable focused CTA '+viewport.width);
+ await page.screenshot({path:out+'/'+viewport.width+'-focus.png'});
+ await page.evaluate(()=>islandReview.unselect(false));await page.waitForTimeout(1500);
+}
+await page.setViewportSize({width:1440,height:1000});await progress(0);
+await page.getByRole('button',{name:'和逸凡打招呼',exact:true}).click();
+check((await page.locator('[data-companions] image').first().getAttribute('href')).endsWith('yifan-wave.webp'),'Greeting waves');
+await page.getByRole('button',{name:'摸摸小牛',exact:true}).click();
+check((await page.locator('[data-companions] image').nth(1).getAttribute('href')).endsWith('cat-stretch.webp'),'Petting stretches cat');
+await page.getByRole('button',{name:'区域目录',exact:true}).click();
+check(await page.locator('#directory').evaluate(n=>n.open),'Directory opens');check(await page.locator('#directory a').count()===7,'Seven direct routes');await page.keyboard.press('Escape');
+check(await page.locator('#directory-open').evaluate(n=>n===document.activeElement),'Directory restores focus');
+await page.getByRole('button',{name:'快速了解我',exact:true}).click();check(await page.locator('.world-dialog').isVisible(),'Profile remains available');await page.keyboard.press('Escape');
+await page.getByRole('button',{name:'切换到夜晚',exact:true}).click();await page.waitForTimeout(1500);await page.screenshot({path:out+'/night.png'});await page.getByRole('button',{name:'切换到白天',exact:true}).click();
+await page.evaluate(()=>islandReview.select('work'));await page.waitForTimeout(1500);await page.locator('#enter-island').click();await page.waitForURL('**/work');
+check(await page.locator('.studio-room-objects a.studio-room-object').count()===7,'Home enters existing seven-project studio');
+await page.goBack();await ready();check(await page.locator('#scene').count()===1,'Back restores one runtime');
+const reduced=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});await reduced.goto(origin+'/');await reduced.waitForFunction(()=>window.islandReview?.getReady());
+const compact=await reduced.locator('[data-original]').getAttribute('transform');await reduced.waitForTimeout(200);check(compact===await reduced.locator('[data-original]').getAttribute('transform'),'Reduced motion disables drift');
+await reduced.evaluate(()=>islandReview.select('writing'));await reduced.waitForTimeout(100);check(await reduced.locator('#enter-island').isVisible(),'Reduced motion retains focused content');
+const fallback=await browser.newPage();await fallback.addInitScript(()=>{const old=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){return kind==='webgl'?null:old.call(this,kind,...args);};});await fallback.goto(origin+'/');await fallback.waitForTimeout(1400);check(await fallback.locator('[data-original]').isVisible(),'WebGL fallback keeps original');await fallback.getByRole('button',{name:'区域目录',exact:true}).click();check(await fallback.locator('#directory a').count()===7,'Fallback retains complete directory');
+const nojs=await browser.newPage({javaScriptEnabled:false});await nojs.goto(origin+'/');check(await nojs.locator('.island-fallback a').count()===7,'No-JS retains content routes');
+check(errors.length===0,'No page exceptions');await fs.writeFile(out+'/inspection.json',JSON.stringify({date:new Date().toISOString(),origin,scope:'Live homepage; behavior assertions plus screenshots for visual review.',checks,views,errors},null,2));console.log(JSON.stringify({checks:checks.length,errors}));await browser.close();

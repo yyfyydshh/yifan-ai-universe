@@ -1,0 +1,1437 @@
+{
+  "schema_version": 1,
+  "reference_lock_version": "world-v2",
+  "source_strategy_locked": true,
+  "review_scope": "all_sections",
+  "viewports": {
+    "desktop": {
+      "width": 1536,
+      "height": 1024
+    },
+    "ultrawide": {
+      "width": 2200,
+      "height": 1200
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "fidelity_ledger": "docs/fidelity-ledger.md",
+  "fresh_review": "docs/fresh-review.md",
+  "fresh_review_mode": "independent",
+  "final_status": "pass",
+  "sections": [
+    {
+      "id": "home",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/home.png",
+        "ultrawide": "qa/world/final/ultrawide/home.png",
+        "mobile": "qa/world/final/mobile/home.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-night",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/home-night.png",
+        "ultrawide": "qa/world/final/ultrawide/home-night.png",
+        "mobile": "qa/world/final/mobile/home-night.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-greeting",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/home-greeting.png",
+        "ultrawide": "qa/world/final/ultrawide/home-greeting.png",
+        "mobile": "qa/world/final/mobile/home-greeting.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "home-cat",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/home-cat.png",
+        "ultrawide": "qa/world/final/ultrawide/home-cat.png",
+        "mobile": "qa/world/final/mobile/home-cat.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "voyage-work",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/voyage-work.png",
+        "ultrawide": "qa/world/final/ultrawide/voyage-work.png",
+        "mobile": "qa/world/final/mobile/voyage-work.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "voyage-writing",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/voyage-writing.png",
+        "ultrawide": "qa/world/final/ultrawide/voyage-writing.png",
+        "mobile": "qa/world/final/mobile/voyage-writing.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "directory",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/directory.png",
+        "ultrawide": "qa/world/final/ultrawide/directory.png",
+        "mobile": "qa/world/final/mobile/directory.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "zone-preview",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/zone-preview.png",
+        "ultrawide": "qa/world/final/ultrawide/zone-preview.png",
+        "mobile": "qa/world/final/mobile/zone-preview.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "quick-profile",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/quick-profile.png",
+        "ultrawide": "qa/world/final/ultrawide/quick-profile.png",
+        "mobile": "qa/world/final/mobile/quick-profile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "contact",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/contact.png",
+        "ultrawide": "qa/world/final/ultrawide/contact.png",
+        "mobile": "qa/world/final/mobile/contact.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "notebook",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/notebook.png",
+        "ultrawide": "qa/world/final/ultrawide/notebook.png",
+        "mobile": "qa/world/final/mobile/notebook.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "dice",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/dice.png",
+        "ultrawide": "qa/world/final/ultrawide/dice.png",
+        "mobile": "qa/world/final/mobile/dice.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "postcard",
+      "route": "/",
+      "reference": {
+        "path": "references/locked/world-v2/world-scene-open-design.png",
+        "sha256": "6d85ac472d9c477e75344ac0935096eed5c03516bd7beeb5727972686bb659d6"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/postcard.png",
+        "ultrawide": "qa/world/final/ultrawide/postcard.png",
+        "mobile": "qa/world/final/mobile/postcard.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "studio-hover",
+      "route": "/work",
+      "reference": {
+        "path": "references/locked/world-v2/studio-room-integrated-design.png",
+        "sha256": "ea69932058ae104ad88d9c93ecf3aeb66d490290cba67c5fe79ae42907196366"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/studio-hover.png",
+        "ultrawide": "qa/world/final/ultrawide/studio-hover.png",
+        "mobile": "qa/world/final/mobile/studio-hover.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "studio-computer",
+      "route": "/work",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/studio-computer.png",
+        "ultrawide": "qa/world/final/ultrawide/studio-computer.png",
+        "mobile": "qa/world/final/mobile/studio-computer.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "work-index",
+      "route": "/work",
+      "reference": {
+        "path": "references/locked/world-v2/studio-room-integrated-design.png",
+        "sha256": "ea69932058ae104ad88d9c93ecf3aeb66d490290cba67c5fe79ae42907196366"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/work-index.png",
+        "ultrawide": "qa/world/final/ultrawide/work-index.png",
+        "mobile": "qa/world/final/mobile/work-index.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "writing-index",
+      "route": "/writing",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "thoughts-index"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/writing-index.png",
+        "ultrawide": "qa/world/final/ultrawide/writing-index.png",
+        "mobile": "qa/world/final/mobile/writing-index.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "thoughts-index",
+      "route": "/thoughts",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "writing-index"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/thoughts-index.png",
+        "ultrawide": "qa/world/final/ultrawide/thoughts-index.png",
+        "mobile": "qa/world/final/mobile/thoughts-index.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "waiting-music",
+      "route": "/music",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "waiting-games",
+          "waiting-films",
+          "waiting-stuff"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/waiting-music.png",
+        "ultrawide": "qa/world/final/ultrawide/waiting-music.png",
+        "mobile": "qa/world/final/mobile/waiting-music.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "waiting-games",
+      "route": "/games",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "waiting-music",
+          "waiting-films",
+          "waiting-stuff"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/waiting-games.png",
+        "ultrawide": "qa/world/final/ultrawide/waiting-games.png",
+        "mobile": "qa/world/final/mobile/waiting-games.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "waiting-films",
+      "route": "/films",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "waiting-music",
+          "waiting-games",
+          "waiting-stuff"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/waiting-films.png",
+        "ultrawide": "qa/world/final/ultrawide/waiting-films.png",
+        "mobile": "qa/world/final/mobile/waiting-films.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "waiting-stuff",
+      "route": "/stuff",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "waiting-music",
+          "waiting-games",
+          "waiting-films"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/waiting-stuff.png",
+        "ultrawide": "qa/world/final/ultrawide/waiting-stuff.png",
+        "mobile": "qa/world/final/mobile/waiting-stuff.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "career",
+      "route": "/career",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/career.png",
+        "ultrawide": "qa/world/final/ultrawide/career.png",
+        "mobile": "qa/world/final/mobile/career.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "profile",
+      "route": "/profile",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/profile.png",
+        "ultrawide": "qa/world/final/ultrawide/profile.png",
+        "mobile": "qa/world/final/mobile/profile.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "article-human-future-and-dried-fruit",
+      "route": "/writing/human-future-and-dried-fruit",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "article-ai-capability-reuse",
+          "article-agent-reliability"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/article-human-future-and-dried-fruit.png",
+        "ultrawide": "qa/world/final/ultrawide/article-human-future-and-dried-fruit.png",
+        "mobile": "qa/world/final/mobile/article-human-future-and-dried-fruit.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "article-ai-capability-reuse",
+      "route": "/thoughts/ai-capability-reuse",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "article-human-future-and-dried-fruit",
+          "article-agent-reliability"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/article-ai-capability-reuse.png",
+        "ultrawide": "qa/world/final/ultrawide/article-ai-capability-reuse.png",
+        "mobile": "qa/world/final/mobile/article-ai-capability-reuse.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "article-agent-reliability",
+      "route": "/thoughts/agent-reliability",
+      "reference": {
+        "path": "references/locked/world-v2/article-paper-design.png",
+        "sha256": "d500de617c8677999a3cbb93e6758b8b339118208e49f3b95f70ad7cd9ce9b66"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "shared",
+        "shared_with": [
+          "article-human-future-and-dried-fruit",
+          "article-ai-capability-reuse"
+        ],
+        "reason": "同类型内容遵循同一已规划阅读/目录结构，保留不同插画与真实内容。",
+        "shared_geometry": "纸面阅读区域、同类标题层级与开放内容行。",
+        "responsive_behavior": "桌面限定宽度；手机单列原生滚动。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/article-agent-reliability.png",
+        "ultrawide": "qa/world/final/ultrawide/article-agent-reliability.png",
+        "mobile": "qa/world/final/mobile/article-agent-reliability.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "project-mast",
+      "route": "/work/sales-copilot",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/project-mast.png",
+        "ultrawide": "qa/world/final/ultrawide/project-mast.png",
+        "mobile": "qa/world/final/mobile/project-mast.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-global-opinion",
+      "route": "/work/global-opinion",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-global-opinion.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-global-opinion.png",
+        "mobile": "qa/world/final/mobile/tour-global-opinion.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-sales-copilot",
+      "route": "/work/sales-copilot",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-sales-copilot.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-sales-copilot.png",
+        "mobile": "qa/world/final/mobile/tour-sales-copilot.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-docs-system",
+      "route": "/work/docs-system",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-docs-system.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-docs-system.png",
+        "mobile": "qa/world/final/mobile/tour-docs-system.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-regulatory-risk",
+      "route": "/work/regulatory-risk",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-regulatory-risk.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-regulatory-risk.png",
+        "mobile": "qa/world/final/mobile/tour-regulatory-risk.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-tender-cleaner",
+      "route": "/work/tender-cleaner",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-tender-cleaner.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-tender-cleaner.png",
+        "mobile": "qa/world/final/mobile/tour-tender-cleaner.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-hot-news-brief",
+      "route": "/work/hot-news-brief",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-hot-news-brief.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-hot-news-brief.png",
+        "mobile": "qa/world/final/mobile/tour-hot-news-brief.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "tour-humanizer",
+      "route": "/work/humanizer",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/tour-humanizer.png",
+        "ultrawide": "qa/world/final/ultrawide/tour-humanizer.png",
+        "mobile": "qa/world/final/mobile/tour-humanizer.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-global-opinion",
+      "route": "/work/global-opinion",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-global-opinion.png",
+        "ultrawide": "qa/world/final/ultrawide/case-global-opinion.png",
+        "mobile": "qa/world/final/mobile/case-global-opinion.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-sales-copilot",
+      "route": "/work/sales-copilot",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-sales-copilot.png",
+        "ultrawide": "qa/world/final/ultrawide/case-sales-copilot.png",
+        "mobile": "qa/world/final/mobile/case-sales-copilot.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-docs-system",
+      "route": "/work/docs-system",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-docs-system.png",
+        "ultrawide": "qa/world/final/ultrawide/case-docs-system.png",
+        "mobile": "qa/world/final/mobile/case-docs-system.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-regulatory-risk",
+      "route": "/work/regulatory-risk",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-regulatory-risk.png",
+        "ultrawide": "qa/world/final/ultrawide/case-regulatory-risk.png",
+        "mobile": "qa/world/final/mobile/case-regulatory-risk.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-tender-cleaner",
+      "route": "/work/tender-cleaner",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-tender-cleaner.png",
+        "ultrawide": "qa/world/final/ultrawide/case-tender-cleaner.png",
+        "mobile": "qa/world/final/mobile/case-tender-cleaner.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-hot-news-brief",
+      "route": "/work/hot-news-brief",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-hot-news-brief.png",
+        "ultrawide": "qa/world/final/ultrawide/case-hot-news-brief.png",
+        "mobile": "qa/world/final/mobile/case-hot-news-brief.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "case-humanizer",
+      "route": "/work/humanizer",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/case-humanizer.png",
+        "ultrawide": "qa/world/final/ultrawide/case-humanizer.png",
+        "mobile": "qa/world/final/mobile/case-humanizer.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "sample-sales-copilot",
+      "route": "/work/sales-copilot",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/sample-sales-copilot.png",
+        "ultrawide": "qa/world/final/ultrawide/sample-sales-copilot.png",
+        "mobile": "qa/world/final/mobile/sample-sales-copilot.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    },
+    {
+      "id": "sample-tender-cleaner",
+      "route": "/work/tender-cleaner",
+      "reference": {
+        "path": "references/locked/world-v2/project-interactive-design.png",
+        "sha256": "c92f7a44026a9a653ec68b95bc852c0a6086c5529cb89bde885c962ff5936898"
+      },
+      "render_contract": "docs/world-restoration-plan-v2.md",
+      "topology": {
+        "kind": "section-specific",
+        "shared_with": [],
+        "reason": "独立页面或状态；按复刻契约检查自己的构图与交互。"
+      },
+      "captures": {
+        "desktop": "qa/world/final/desktop/sample-tender-cleaner.png",
+        "ultrawide": "qa/world/final/ultrawide/sample-tender-cleaner.png",
+        "mobile": "qa/world/final/mobile/sample-tender-cleaner.png"
+      },
+      "gates": {
+        "visual_meaning": "pass",
+        "hierarchy": "pass",
+        "personal_evidence": "pass",
+        "composition": "pass",
+        "typography": "pass",
+        "asset_crop": "pass",
+        "overlap": "pass",
+        "responsive": "pass",
+        "reference_fidelity": "pass"
+      },
+      "status": "pass"
+    }
+  ]
+}

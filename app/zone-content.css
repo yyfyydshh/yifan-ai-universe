@@ -1,0 +1,113 @@
+.zone-content-page {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 100px 0 72px;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+.zone-content-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  min-height: 320px;
+  margin-bottom: 32px;
+}
+.zone-content-intro { max-width: 640px; }
+.zone-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-bottom: 22px;
+  color: var(--color-accent);
+  font-size: 15px;
+  font-weight: 600;
+}
+.zone-content-intro h1 {
+  margin: 0 0 22px;
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 4.2vw, 60px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+.zone-content-intro > p {
+  max-width: 32em;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--color-ink-2);
+}
+.zone-content-art {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 5 / 4;
+  justify-self: end;
+}
+.zone-content-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.workshop-projects { border-top: 1px solid var(--color-rule); }
+.workshop-project {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) 136px;
+  gap: 24px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+.workshop-project-mark { display: grid; justify-items: start; gap: 14px; align-self: start; color: var(--color-accent); padding-top: 5px; }
+.workshop-project-mark > span { color: var(--color-muted); font-size: 13px; font-family: var(--font-label); }
+.workshop-project-copy { min-width: 0; }
+.workshop-project-category { color: var(--color-muted); font-size: 13px; margin: 0 0 8px; }
+.workshop-project h2 { font-family: var(--font-heading); font-size: clamp(21px, 2vw, 27px); line-height: 1.5; margin: 0 0 10px; letter-spacing: -.025em; }
+.workshop-project-copy > p:not(.workshop-project-category) { color: var(--color-ink-2); font-size: 16px; line-height: 1.8; margin: 0; }
+.workshop-project-tags { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; padding: 0; margin: 16px 0 0; color: var(--color-muted); font-size: 12px; }
+.workshop-project-link { display: inline-flex; align-items: center; justify-content: flex-end; gap: 12px; min-height: 44px; color: var(--color-accent); font-size: 14px; font-weight: 600; }
+.workshop-project h2 a:hover, .zone-note h2 a:hover { color: var(--color-accent); }
+.workshop-project-link:hover, .zone-back:hover, .zone-continue a:hover, .zone-pending-links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.zone-note-list { max-width: 940px; border-top: 1px solid var(--color-rule); }
+.zone-note { padding: 32px 0 36px; border-bottom: 1px solid var(--color-rule); }
+.zone-note-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--color-muted); font-size: 13px; margin-bottom: 12px; }
+.zone-note h2 { font-family: var(--font-heading); font-size: clamp(23px, 2.6vw, 31px); line-height: 1.55; font-weight: 650; margin: 0 0 14px; letter-spacing: -.025em; }
+.zone-note h2 a { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 44px; }
+.zone-note h2 svg { color: var(--color-accent); flex: 0 0 auto; }
+.zone-note > p { max-width: 48em; font-size: 16px; color: var(--color-ink-2); line-height: 1.85; margin: 0; }
+.zone-continue { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 36px; margin-top: 44px; font-size: 15px; }
+.zone-continue > span { color: var(--color-muted); }
+.zone-continue a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--color-accent); font-weight: 600; }
+.zone-archive-nav { display: flex; gap: 12px 32px; flex-wrap: wrap; margin: 0 0 24px; }
+.zone-archive-nav a { color: var(--color-accent); min-height: 44px; display: inline-flex; align-items: center; font-size: 15px; text-decoration: underline; text-underline-offset: 6px; }
+.zone-pending { max-width: 760px; border-top: 1px solid var(--color-rule); padding-top: 36px; }
+.zone-pending-status { font-size: 14px; font-weight: 600; color: var(--color-accent); margin: 0 0 16px; }
+.zone-pending h2 { font-family: var(--font-heading); font-size: clamp(25px, 2.5vw, 32px); line-height: 1.5; margin: 0 0 18px; letter-spacing: -.025em; }
+.zone-pending > p:not(.zone-pending-status) { color: var(--color-ink-2); font-size: 17px; line-height: 1.85; max-width: 39em; margin: 0; }
+.zone-pending-links { display: flex; gap: 16px 28px; flex-wrap: wrap; margin-top: 28px; align-items: center; }
+.zone-pending-links a { display: inline-flex; min-height: 46px; align-items: center; gap: 12px; color: var(--color-accent); font-weight: 600; font-size: 15px; }
+.zone-pending-links .zone-primary-link { background: var(--color-accent); color: var(--color-accent-ink); border: 1px solid var(--color-accent); border-radius: var(--radius-md); padding: 10px 18px; }
+.zone-content-page a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 6px; border-radius: 3px; }
+
+@media (max-width: 800px) {
+  .zone-content-page { width: calc(100% - 48px); padding-top: 88px; }
+  .zone-content-hero { gap: 18px; min-height: 270px; }
+  .zone-content-intro > p { font-size: 16px; }
+  .workshop-project { grid-template-columns: 44px minmax(0, 1fr); gap: 20px; }
+  .workshop-project-link { grid-column: 2; justify-content: flex-start; }
+}
+@media (max-width: 540px) {
+  .zone-content-page { width: calc(100% - 40px); padding: 86px 0 48px; }
+  .zone-content-hero { grid-template-columns: 1fr; gap: 0; margin-bottom: 24px; }
+  .zone-back { margin-bottom: 18px; }
+  .zone-content-intro h1 { margin-bottom: 16px; font-size: 38px; }
+  .zone-content-art { width: 88%; max-width: 340px; justify-self: center; margin: 8px 0 0; }
+  .workshop-project { padding: 26px 0; column-gap: 14px; row-gap: 12px; }
+  .workshop-project-copy > p:not(.workshop-project-category) { font-size: 15px; }
+  .workshop-project-tags { gap: 6px 12px; }
+  .zone-note { padding: 26px 0; }
+  .zone-note h2 a { gap: 16px; }
+  .zone-note h2 svg { width: 20px; }
+  .zone-note > p { font-size: 15px; }
+  .zone-continue { column-gap: 22px; margin-top: 30px; }
+  .zone-continue > span { flex: 0 0 100%; }
+  .zone-pending { padding-top: 28px; }
+  .zone-pending > p:not(.zone-pending-status) { font-size: 16px; }
+}

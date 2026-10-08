@@ -12,8 +12,9 @@ export const metadata = buildPageMetadata({
 export default function CareerPage() {
   return (
     <main className="page-shell career-page">
+      <Link href="/profile" className="back-link">← 返回关于我</Link>
       <header className="page-intro">
-        <p className="section-label">CAREER EVOLUTION</p>
+        <p className="section-label">一路走来 / MY JOURNEY</p>
         <h1>职业轨迹</h1>
         <p>从一线客户问题、系统排查与团队交付，逐步走向 AI 场景建设。</p>
         <dl className="career-overview" aria-label="职业概览">
