@@ -1,10 +1,10 @@
 {
+  "sourceCommit": "2a37724a33735e330869cba3ddc7829c9aa1184f",
   "site": "https://yangyifan.me/",
-  "sourceCommit": "9430e952cc85bda81e13512dc8685658703c6056",
-  "publishedAt": "2026-10-08T02:12:21.6475629Z",
   "checks": {
-    "regressions": 109,
-    "staticPagesAudited": 21,
-    "clientTransitions": 7
-  }
+    "typeCheck": "passed",
+    "staticBuild": "passed",
+    "legacyArticleRoute": "preserved"
+  },
+  "publishedAt": "2026-10-08T03:23:50.4781920Z"
 }
