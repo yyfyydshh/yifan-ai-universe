@@ -23,6 +23,16 @@
   --color-sun: #d98b18;
   --color-overlay: #183e4359;
   --color-shadow: #3349351a;
+  /* Writing cottage: illustration surround and a quiet, paper-bound reader. */
+  --color-writing-wall: #dedbc5;
+  --color-writing-book: #35594f;
+  --color-writing-book-ink: #faf2d9;
+  --color-writing-marker: #a34f3f;
+  --color-writing-glow: #fff2be;
+  --color-writing-scene-ink: #253c3b;
+  --color-writing-scene-paper: #fff9e9;
+  --color-writing-night-wall: #253534;
+  --color-writing-backdrop: #152c32b8;
   --font-cartoon: "KaiTi", "STKaiti", "Noto Serif SC", "Microsoft YaHei", serif;
   --color-success: #376448;
   --color-warning: #825517;

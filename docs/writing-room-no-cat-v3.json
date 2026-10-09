@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "engine": "built-in image_gen",
+  "edit": "Remove bench cat and cat figurine from both day and night illustrations.",
+  "inputs": [
+    "public/world/writing-room-day-v2.webp",
+    "public/world/writing-room-night-v2.webp"
+  ],
+  "outputs": [
+    "public/world/writing-room-day-v3.webp",
+    "public/world/writing-room-night-v3.webp"
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "prompt": "Use case: precise-object-edit. This is a narrowly scoped removal edit of the supplied illustration.\nRemove the sleeping black-and-white cat from the window bench, at approximately x53–65%, y43–51%. Reconstruct only the cream seat cushion and its natural seams and existing shadow where the cat was. Also remove the small beige cat-shaped figurine from the upper-left bookcase at approximately x16–19%, y28–34%; leave the shelf space naturally empty with the same shelf background. No cats, no cat figures and no substitute animal.\nABSOLUTELY PRESERVE all other pixels and visual properties as closely as possible: exact framing, dimensions 1536x1024, camera, cartoon linework, color palette, lighting, furniture, all pillow positions, round window view, shelves and books, plants, desk, open blank notebook, envelope, lamp, chair, rug, and every object's position. Do not redesign or re-render the entire room. This is local object removal only. No added decoration or people, no letters, no UI, no watermark. Full opaque rectangular output, preserve 3:2 aspect ratio.",
+  "variantInstructions": {
+    "day": "Keep existing warm daylight unchanged.",
+    "night": "Keep existing blue nighttime and warm lamplight unchanged."
+  }
+}

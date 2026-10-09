@@ -18,6 +18,7 @@ window.mountIslandWorld = function(root) {
  ];
  const preference=matchMedia('(prefers-reduced-motion: reduce)');let reduced=preference.matches;
  let terrain=null,ready=false,disposed=false,breeze=true,frame=0,lastTime=performance.now(),motionTime=0,value=0;
+ let lastAmbientFrame=0,activeUntil=0,renderCount=0;
  let mouseX=0,mouseY=0,selected=null,focus=0,lastSelected=null,speechUntil=0,waveUntil=0,catUntil=0,gustUntil=0;
  let lastCamera=[],lastPositions=[],lastScale=1,manualMotion=false;
  const transitions=bodies.map(()=>({x:0,y:0}));
@@ -29,8 +30,9 @@ window.mountIslandWorld = function(root) {
  const hero=$('.hero-copy'),caption=$('.scene-caption'),sky=$('.sky'),panel=$('#island-preview'),speech=$('#character-speech');
  const hoverCard=$('#island-hover');let hovered=null;
  const progressBar=$('.scroll-progress span'),hint=$('#scroll-hint');
- scene.replaceChildren();
- const whole=el('g',{'data-original':''});whole.append(el('image',{href:asset('island-complete-v4.png'),width:1309,height:1201}));scene.append(whole);
+ const whole=scene.querySelector('[data-original]')||el('g',{'data-original':''});
+ if(!whole.firstElementChild)whole.append(el('image',{href:asset('island-complete-v4.webp'),width:1309,height:1201}));
+ scene.replaceChildren(whole);
  // Both feet and cat share a contact plane well inside the central grass.
  const companions=el('g',{'data-companions':'idle'});scene.append(companions);
  const shadows=el('g',{fill:'#345837',opacity:'.19'});shadows.append(el('ellipse',{cx:650,cy:547,rx:86,ry:12}),el('ellipse',{cx:806,cy:547,rx:61,ry:9}));companions.append(shadows);
@@ -81,7 +83,7 @@ window.mountIslandWorld = function(root) {
  const traces=Array.from({length:3},(_,i)=>{const node=el('path',{d:'M0 8Q45 -10 100 5T180 7',class:'wind-trace'});wind.append(node);return{node,index:i};});
  const particles=[];
  const getProgress=()=>clamp(scrollY/Math.max(1,journey.offsetHeight-innerHeight));
- function say(text){speech.textContent=text;speechUntil=performance.now()+2600;run();}
+ function say(text){speech.textContent=text;speechUntil=performance.now()+2600;activeUntil=speechUntil;run();}
  function greet(){waveUntil=performance.now()+2200;personImage.setAttribute('href',asset('yifan-wave.webp'));say('嗨，我是逸凡。欢迎来我的世界！');}
  function pet(){catUntil=performance.now()+2600;catImage.setAttribute('href',asset('cat-stretch.webp'));say('喵～ 伸个懒腰，陪你逛逛。');}
  for(const[node,action]of[[person,greet],[cat,pet]]){
@@ -93,6 +95,7 @@ window.mountIslandWorld = function(root) {
   hideHover();
   if(!ready){$('#directory').showModal();return;}
   lastSelected=selected=id;
+  activeUntil=performance.now()+1800;
   // Native scroll settles the full group first; focus has its own eased camera.
   window.scrollTo({top:journey.offsetHeight-innerHeight,behavior:'instant'});
   root.dataset.focused='true';panel.hidden=false;
@@ -107,7 +110,7 @@ window.mountIslandWorld = function(root) {
   $('#unfocus').focus({preventScroll:true});
   run();
  }
- function unselect(restoreFocus=true){const id=selected;selected=null;root.dataset.focused='false';panel.hidden=true;links.forEach(l=>l.node.setAttribute('aria-expanded','false'));if(restoreFocus&&id)links.find(l=>l.body.id===id)?.node.focus({preventScroll:true});run();}
+ function unselect(restoreFocus=true){const id=selected;selected=null;activeUntil=performance.now()+1800;root.dataset.focused='false';panel.hidden=true;links.forEach(l=>l.node.setAttribute('aria-expanded','false'));if(restoreFocus&&id)links.find(l=>l.body.id===id)?.node.focus({preventScroll:true});run();}
  listen($('#unfocus'),'click',()=>unselect());
  root.querySelectorAll('[data-select-zone]').forEach(node=>listen(node,'click',()=>select(node.dataset.selectZone)));
  listen(document,'keydown',event=>{if(event.key==='Escape'){hideHover();if(!document.querySelector('dialog[open]')&&selected)unselect();}});
@@ -136,6 +139,11 @@ window.mountIslandWorld = function(root) {
  }
  function render(now=performance.now()){
   if(disposed)return;cancelAnimationFrame(frame);frame=0;
+  // Gentle idle drift needs fewer paints than scrolling, pointing and focus.
+  // This leaves main-thread time for input without reducing texture resolution.
+  if(breeze&&!reduced&&!manualMotion&&now>activeUntil&&now-lastAmbientFrame<30){frame=requestAnimationFrame(render);return;}
+  lastAmbientFrame=now;
+  renderCount++;
   const elapsed=Math.max(0,Math.min(now-lastTime,50));lastTime=now;
   if(breeze&&!reduced&&!document.hidden&&!manualMotion)motionTime+=elapsed;
   value=getProgress();const p=ready?(reduced?(value<.5?0:1):value):0;
@@ -186,25 +194,26 @@ window.mountIslandWorld = function(root) {
  }
  function screenPoint(x,y){const r=scene.getBoundingClientRect(),c=lastCamera;return[r.left+(r.width-c[2]*lastScale)/2+(x-c[0])*lastScale,r.top+(r.height-c[3]*lastScale)/2+(y-c[1])*lastScale];}
  function run(){if(!frame&&!disposed){lastTime=performance.now();frame=requestAnimationFrame(render);}}
- function onScroll(){hideHover();if(selected&&getProgress()<.94)unselect(false);if(!frame)render();}
- listen(window,'scroll',onScroll,{passive:true});listen(window,'resize',()=>{hideHover();render();},{passive:true});
- listen(preference,'change',event=>{reduced=event.matches;render();});listen(document,'visibilitychange',()=>{if(!document.hidden)run();else{cancelAnimationFrame(frame);frame=0;}});
+ function onScroll(){activeUntil=performance.now()+450;hideHover();if(selected&&getProgress()<.94)unselect(false);if(!frame)render();}
+ listen(window,'scroll',onScroll,{passive:true});listen(window,'resize',()=>{activeUntil=performance.now()+450;hideHover();render();},{passive:true});
+ listen(preference,'change',event=>{activeUntil=performance.now()+450;reduced=event.matches;render();});listen(document,'visibilitychange',()=>{if(!document.hidden)run();else{cancelAnimationFrame(frame);frame=0;}});
  let pointerLast=0,pointerX=0,pointerY=0;
- listen(root,'pointermove',event=>{if(event.pointerType!=='mouse'||reduced)return;mouseX=event.clientX/innerWidth-.5;mouseY=event.clientY/innerHeight-.5;const now=performance.now(),distance=Math.hypot(event.clientX-pointerX,event.clientY-pointerY);if(breeze&&now-pointerLast>85&&distance>18&&!event.target.closest('button,a,dialog,.island-preview')){const node=el('path',{d:'M0 5Q8 -3 17 2Q11 12 0 5Z',class:'wind-leaf'});wind.append(node);particles.push({node,x:event.clientX,y:event.clientY,born:now});pointerLast=now;gustUntil=now+900;}pointerX=event.clientX;pointerY=event.clientY;run();},{passive:true});
+ listen(root,'pointermove',event=>{if(event.pointerType!=='mouse'||reduced)return;mouseX=event.clientX/innerWidth-.5;mouseY=event.clientY/innerHeight-.5;const now=performance.now(),distance=Math.hypot(event.clientX-pointerX,event.clientY-pointerY);activeUntil=now+350;if(breeze&&now-pointerLast>85&&distance>18&&!event.target.closest('button,a,dialog,.island-preview')){const node=el('path',{d:'M0 5Q8 -3 17 2Q11 12 0 5Z',class:'wind-leaf'});wind.append(node);particles.push({node,x:event.clientX,y:event.clientY,born:now});pointerLast=now;gustUntil=now+900;}pointerX=event.clientX;pointerY=event.clientY;run();},{passive:true});
  listen($('#home'),'click',()=>{unselect(false);window.scrollTo({top:0,behavior:reduced?'instant':'smooth'});});
- listen($('#breeze'),'click',()=>{hideHover();breeze=!breeze;const b=$('#breeze');b.setAttribute('aria-label',breeze?'暂停漂浮':'继续漂浮');b.title=breeze?'暂停漂浮':'继续漂浮';b.setAttribute('aria-pressed',String(!breeze));render();});
+ listen($('#breeze'),'click',()=>{activeUntil=performance.now()+350;hideHover();breeze=!breeze;const b=$('#breeze');b.setAttribute('aria-label',breeze?'暂停漂浮':'继续漂浮');b.title=breeze?'暂停漂浮':'继续漂浮';b.setAttribute('aria-pressed',String(!breeze));render();});
  const dialog=$('#directory');listen($('#directory-open'),'click',()=>dialog.showModal());listen($('#directory-close'),'click',()=>dialog.close());
  listen(dialog,'click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
  const load=src=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=asset(src);});
- Promise.all(['island-complete-v4.png',...bodies.map(b=>'v6-native-'+b.id+(['work','thoughts'].includes(b.id)?'-clean':'')+'.webp')].map(load)).then(async loaded=>{
-  if(disposed)return;const renderer=await window.createTerrainRenderer(canvas,bodies,loaded[0],loaded.slice(1));if(disposed){renderer.dispose();return;}terrain=renderer;ready=true;$('#loading').hidden=true;render();
+ const mask=fetch(asset('island-hitmask-v4.bin')).then(response=>{if(!response.ok)throw new Error('hitmask unavailable');return response.arrayBuffer();}).then(bytes=>new Uint8Array(bytes)).catch(()=>null);
+ Promise.all([...['island-complete-v4.webp',...bodies.map(b=>'v6-native-'+b.id+(['work','thoughts'].includes(b.id)?'-clean':'')+'.webp')].map(load),mask]).then(async loaded=>{
+  if(disposed)return;const renderer=await window.createTerrainRenderer(canvas,bodies,loaded[0],loaded.slice(1,-1),loaded.at(-1));if(disposed){renderer.dispose();return;}terrain=renderer;ready=true;$('#loading').hidden=true;render();
   ['yifan-wave.webp','cat-stretch.webp',...bodies.filter(b=>b.hot).map(b=>'reaction-'+b.id+'.webp')].forEach(src=>{load(src).catch(()=>{});});
  }).catch(()=>{if(!disposed){root.dataset.failed='true';$('#loading').textContent='可从区域目录继续探索。';render();}});
  listen(canvas,'terrainlost',()=>{ready=false;terrain?.dispose();terrain=null;root.dataset.failed='true';render();});
  listen(window,'pagehide',()=>{cancelAnimationFrame(frame);frame=0;});listen(window,'pageshow',()=>run());
  root.dataset.mounted='true';render();
- const review={mode:'scroll',pieces:bodies,getProgress:()=>value,getReady:()=>ready,getBounds:()=>terrain?.getBounds(),getFrame:()=>terrain?.getFrame(),getPositions:()=>lastPositions,getCamera:()=>lastCamera,getSelection:()=>selected,
-  setProgress:n=>{unselect(false);window.scrollTo({top:clamp(n)*(journey.offsetHeight-innerHeight),behavior:'instant'});render();},
+ const review={mode:'scroll',pieces:bodies,getProgress:()=>value,getReady:()=>ready,getRenderCount:()=>renderCount,getBounds:()=>terrain?.getBounds(),getFrame:()=>terrain?.getFrame(),getPositions:()=>lastPositions,getCamera:()=>lastCamera,getSelection:()=>selected,
+  setProgress:n=>{activeUntil=performance.now()+450;unselect(false);window.scrollTo({top:clamp(n)*(journey.offsetHeight-innerHeight),behavior:'instant'});render();},
   setMotionTime:n=>{manualMotion=true;motionTime=n;render();manualMotion=false;},getMotionTime:()=>motionTime,select,unselect};window.islandReview=review;
  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);terrain?.dispose();scene.replaceChildren();wind.replaceChildren();delete root.dataset.mounted;if(window.islandReview===review)delete window.islandReview;};
 };

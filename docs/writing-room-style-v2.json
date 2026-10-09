@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "generatedAt": "2026-10-08",
+  "engine": "built-in image_gen",
+  "purpose": "Correct the writing cottage's painterly drift to match the original cartoon world.",
+  "styleReferences": [
+    "public/world/studio-room-integrated.webp",
+    "public/world/writing.webp",
+    "public/world/studio-room-night-v2.webp"
+  ],
+  "compositionReference": "public/world/writing-room-day.webp",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "outputs": {
+    "day": "public/world/writing-room-day-v2.webp",
+    "night": "public/world/writing-room-night-v2.webp"
+  },
+  "prompts": {
+    "day": "Use case: style-transfer correction for an existing website scene.\nREFERENCE ROLES:\nImage 1 (studio-room-integrated.webp) is the PRIMARY AUTHORITATIVE ART STYLE: this is the existing cartoon studio on the same website. The new illustration must look drawn by exactly this same illustrator.\nImage 2 (writing.webp) is the website's established cartoon cottage. Use its clear dark rounded outlines, cheerful compact shapes, broad simple leafy masses and smooth saturated color blocking as additional style evidence. Ignore its transparent background; final output is a full opaque rectangular interior.\nImage 3 (writing-room-day.webp) is the EDIT TARGET, use ONLY its room composition, object positions and architecture. Its current overly realistic textured/painterly rendering is WRONG and must be replaced throughout.\n\nTASK: Redraw the ENTIRE composition of image 3 in the actual crisp 2D cartoon style of images 1 and 2. A thorough re-illustration, not a photographic filter and not merely higher saturation. Match image 1's contour weight, its simple tidy objects and clean broadly shaded surfaces. Dark brown/near-black visible outlines about 2–4 px at 1536px width on furniture, books, cushions, leaves, cat and architecture. Smooth clean color fields, 2–3 broad cel-shading tones per object, bright golden-brown wood, fresh greens, cream walls, light blue sky. Rounded chunky plant leaves grouped into a few readable shapes, simplified large book spines, a friendly compact cartoon black-and-white cat with simple facial lines. Dark legible contours must remain visible at thumbnail size.\nREMOVE all plaster grain, tiny wood pores, distressed edges, scratched furniture, woven fabric fibers, brass photoreal reflections, fur strands, intricate botanical patterns, dense tiny leaves, detailed landscape haze, painterly stipple and mottled photographic sun-dapple. Walls and paper are smooth, cushions simple solid-color blocks, rug just a few broad simple motifs. Window landscape should be simplified floating islands and clouds in the same clear cartoon manner as image 1, not a detailed landscape painting. Use restrained simple broad warm lighting and a few clean shadow shapes. Keep enough shading to match the dimensional cartoon studio, not flat vector clipart.\nINVARIANTS: Preserve image 3's camera, 3:2 framing, exact room layout, positions and recognizable silhouettes: bookcase LEFT x0–23%, round window center-right, window bench and cat around x59% y47%, writing desk in foreground right, open blank notebook center x69% y65%, wax-sealed envelope x88.5% y69%, pen, lamp, chair. Keep same perspective and object boundaries so existing transparent click targets still align. Window and desk stay in image 3's positions. Do not replace the room with the studio; do not copy its arched window or computer.\nOutput one 1536x1024 opaque landscape illustration, clean and crisp. No text, no labels, no lettering, no UI, no watermarks. No added people, no new objects. Render the room as unmistakably the SAME CARTOON WORLD as image 1.",
+    "night": "Use case: lighting-weather with exact style preservation.\nImage 1 is the EDIT TARGET: corrected crisp 2D cartoon writing cottage. Image 2 is ONLY a lighting and palette reference: the existing cartoon studio at night on the same website.\nProduce the nighttime version of IMAGE 1. Preserve its EXACT pixel geometry, framing, 1536x1024 size, positions, line drawing, furniture, leaves, books, round window, cat, cushion shapes, open notebook, envelope, desk, chair, rug. No camera movement, no cropping, no shape changes. The day/night website overlays need every object aligned.\nKeep the primary image's strong clean dark outlines, big smooth color blocks, simple cel-shaded shadows and round chunky cartoon forms. NO new texture: no painterly grain, no wood pores, no realistic cloth, fur strands, photographic shading, tiny leaves or photoreal reflections. Same illustrator and style as the second reference.\nOnly adjust time of day and illumination. Outside round window, the same floating islands and clouds against a deep cobalt-blue starry sky, small pale moon and a few warmly lit castle windows. Inside, the brass desk lamp casts a warm amber light across the blank notebook, sealed envelope, desk and nearby seat. Clear, readable warm mid-tones as in image 2. The bookcase and houseplants remain discernible, not obscured by a dark muddy filter. Remove daytime sun patches, replace with broad simple lamp-lit areas and clean blue ambient shadow shapes. Match reference 2's gentle amber-versus-blue nighttime palette, with no realistic lighting simulation.\nFinal image is full opaque landscape, one 1536x1024 image. All paper remains blank, no letters, no text, no labels, no UI, no watermark, no added furniture or people. Preserve the cartoon simplification of image 1 perfectly."
+  },
+  "review": {
+    "linework": "Clear dark outlines aligned with the studio.",
+    "surfaces": "Smooth color blocks; removed grain, distressed wood and intricate fabric texture.",
+    "forms": "Simplified rounded plants, books and sleeping cow cat.",
+    "composition": "Same writing room layout; notebook, envelope and shelf hotspots preserved.",
+    "night": "Same composition with blue exterior and amber desk lighting."
+  }
+}

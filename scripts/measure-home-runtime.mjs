@@ -6,11 +6,13 @@ const browser=await chromium.launch(),page=await browser.newPage({viewport:{widt
 await page.goto('http://127.0.0.1:3010/');await page.waitForFunction(()=>window.islandReview?.getReady());
 await page.evaluate(()=>islandReview.setProgress(1));
 const result=await page.evaluate(async()=>{
- const values=[];let last=performance.now();
+ const values=[];let last=performance.now(),started=last;
+ const before=window.islandReview.getRenderCount();
  for(let i=0;i<180;i++)await new Promise(resolve=>requestAnimationFrame(now=>{if(i>10)values.push(now-last);last=now;resolve();}));
+ const paintFps=(window.islandReview.getRenderCount()-before)/(last-started)*1000;
  values.sort((a,b)=>a-b);const gl=document.querySelector('#terrain').getContext('webgl'),ext=gl.getExtension('WEBGL_debug_renderer_info');
  const assets=performance.getEntriesByType('resource').filter(e=>e.name.includes('/world/')&&e.initiatorType!=='script');
- return {environment:{userAgent:navigator.userAgent,viewport:[innerWidth,innerHeight],dpr:devicePixelRatio,renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'unavailable'},frames:values.length,meanFps:1000/(values.reduce((a,b)=>a+b,0)/values.length),p95FrameMs:values[Math.floor(values.length*.95)],imageTransferredBytes:assets.reduce((n,r)=>n+r.transferSize,0),imageResources:assets.length};
+ return {environment:{userAgent:navigator.userAgent,viewport:[innerWidth,innerHeight],dpr:devicePixelRatio,renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'unavailable'},frames:values.length,meanFps:1000/(values.reduce((a,b)=>a+b,0)/values.length),p95FrameMs:values[Math.floor(values.length*.95)],worldPaintFps:paintFps,imageTransferredBytes:assets.reduce((n,r)=>n+r.transferSize,0),imageResources:assets.length};
 });
 // Capture additional night sizes after the background has had time to decode.
 await page.getByRole('button',{name:'暂停漂浮',exact:true}).click();await page.evaluate(()=>islandReview.setProgress(0));

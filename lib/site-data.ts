@@ -1036,6 +1036,9 @@ export type NoteEntry = {
   readingTime: string;
   conclusionType: string;
   readingDirection: string;
+  /** Optional original publication, supplied with the author's article. */
+  source?: { label: string; url: string };
+  publishedAt?: string;
 };
 
 export const notes: NoteEntry[] = [

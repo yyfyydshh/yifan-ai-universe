@@ -2,10 +2,12 @@
  * each independent island keeps its native texture pixels and clean alpha.
  * The complete source is used only for the assembled view, never as patches.
  */
-window.createTerrainRenderer = async function(canvas, bodies, source, images) {
+window.createTerrainRenderer = async function(canvas, bodies, source, images,hitmask) {
+  performance.mark('island-terrain-start');
   const W=1309,H=1201;
   const gl=canvas.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true});
   if(!gl)throw new Error('WebGL unavailable');
+  performance.mark('island-terrain-context');
   const polygons={
     central:[[0,0],[W,0],[W,H],[0,H]],
     writing:[[238,0],[678,0],[675,192],[625,273],[588,345],[510,349],[472,403],[414,407],[355,378],[335,312],[270,280],[224,260]],
@@ -16,17 +18,40 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
     thoughts:[[0,530],[130,516],[233,514],[322,527],[389,583],[421,642],[463,684],[540,682],[635,713],[696,785],[675,H],[0,H]],
     stuff:[[1070,440],[1309,440],[1309,H],[877,H],[885,875],[907,753],[932,655],[950,598],[982,554],[998,500]]
   };
+  // Alpha bounds of the fixed v6-native assets, with a two-pixel safety edge.
+  // Avoid reading and scanning eight full-resolution canvases on every visit.
+  const nativeCrops={
+    central:[1536,1024,79,85,1489,945],writing:[1225,1284,108,24,1145,1243],
+    music:[1309,1201,197,25,1158,1167],work:[1254,1254,182,32,1050,1215],
+    games:[1211,1299,100,43,1171,1264],films:[1309,1201,273,46,1048,1133],
+    thoughts:[1254,1254,66,56,1182,1166],stuff:[1254,1254,295,12,1028,1245]
+  };
   function surface(w=W,h=H){const c=document.createElement('canvas');c.width=w;c.height=h;return c;}
-  function path(ctx,points){ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();}
-  const original=surface(),o=original.getContext('2d',{willReadFrequently:true});o.drawImage(source,0,0,W,H);
-  const pixels=o.getImageData(0,0,W,H),owners=new Uint8Array(W*H),originalAlpha=new Uint8Array(W*H);
-  for(let p=0;p<originalAlpha.length;p++)originalAlpha[p]=pixels.data[p*4+3];
-  const mask=surface(),m=mask.getContext('2d',{willReadFrequently:true});
-  bodies.forEach((b,i)=>{
-    m.clearRect(0,0,W,H);m.fillStyle='#fff';path(m,polygons[b.id]);m.fill();
-    const a=m.getImageData(0,0,W,H).data;
-    for(let p=0;p<owners.length;p++)if(a[p*4+3]>127)owners[p]=i;
-  });
+  // The thresholded alpha was prepared from the fixed illustration at build
+  // time. A missing mask falls back to the original pixel read, not a broken
+  // interaction surface.
+  let originalAlpha=null;
+  if(!hitmask||hitmask.length!==Math.ceil(W*H/8)){
+    const original=surface(),o=original.getContext('2d',{willReadFrequently:true});
+    o.drawImage(source,0,0,W,H);
+    const pixels=o.getImageData(0,0,W,H).data;
+    originalAlpha=new Uint8Array(W*H);
+    for(let p=0;p<originalAlpha.length;p++)originalAlpha[p]=pixels[p*4+3];
+  }
+  const sourceVisible=p=>hitmask&&hitmask.length===Math.ceil(W*H/8)?Boolean(hitmask[p>>3]&(1<<(p&7))):originalAlpha[p]>40;
+  const inside=(x,y,points)=>{
+    let hit=false;
+    for(let a=0,b=points.length-1;a<points.length;b=a++){
+      const [ax,ay]=points[a],[bx,by]=points[b];
+      if((ay>y)!==(by>y)&&x<(bx-ax)*(y-ay)/(by-ay)+ax)hit=!hit;
+    }
+    return hit;
+  };
+  const ownerAt=(x,y)=>{
+    for(let i=bodies.length-1;i>=0;i--)if(inside(x+.5,y+.5,polygons[bodies[i].id]))return bodies[i].id;
+    return null;
+  };
+  performance.mark('island-terrain-owners');
   function texture(input){
     const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);
     // Filter premultiplied pixels so transparent margins cannot tint the edge.
@@ -55,15 +80,19 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
     // canvas first used to throw away most building pixels before zooming.
     const native=surface(iw,ih),ctx=native.getContext('2d',{willReadFrequently:true});
     ctx.drawImage(image,0,0);
-    const data=ctx.getImageData(0,0,iw,ih).data;
-    let x0=iw,y0=ih,x1=-1,y1=-1;
-    // Ignore alpha 1–2 export dust when measuring the silhouette, while
-    // retaining the antialiased outline and small detached rocks.
-    for(let y=0;y<ih;y++)for(let x=0;x<iw;x++)if(data[(y*iw+x)*4+3]>2){
-      x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);
+    const known=nativeCrops[body.id];
+    let x0,y0,x1,y1;
+    if(known&&known[0]===iw&&known[1]===ih){[, ,x0,y0,x1,y1]=known;}
+    else{
+      // Newly replaced art still works until its bounds are added above.
+      const data=ctx.getImageData(0,0,iw,ih).data;
+      x0=iw;y0=ih;x1=-1;y1=-1;
+      for(let y=0;y<ih;y++)for(let x=0;x<iw;x++)if(data[(y*iw+x)*4+3]>2){
+        x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);
+      }
+      x0=Math.max(0,x0-2);y0=Math.max(0,y0-2);x1=Math.min(iw-1,x1+2);y1=Math.min(ih-1,y1+2);
     }
     if(x1<0)throw new Error('Empty island texture: '+body.id);
-    x0=Math.max(0,x0-2);y0=Math.max(0,y0-2);x1=Math.min(iw-1,x1+2);y1=Math.min(ih-1,y1+2);
     const w=x1-x0+1,h=y1-y0+1,crop=ctx.getImageData(x0,y0,w,h);
     const alpha=new Uint8Array(w*h);
     for(let p=0;p<alpha.length;p++)alpha[p]=crop.data[p*4+3];
@@ -71,6 +100,7 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
     resources.push({body,rect:[x+x0*sx,y+y0*sy,w*sx,h*sy],alpha,textureSize:[w,h],textures:textureLevels(crop)});
     await new Promise(resolve=>setTimeout(resolve,0));
   }
+  performance.mark('island-terrain-textures');
   function shader(type,code){const s=gl.createShader(type);gl.shaderSource(s,code);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
   const program=gl.createProgram();
   gl.attachShader(program,shader(gl.VERTEX_SHADER,`
@@ -94,7 +124,7 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
   const attribute=gl.getAttribLocation(program,'a_position');gl.enableVertexAttribArray(attribute);gl.vertexAttribPointer(attribute,2,gl.FLOAT,false,0,0);
   const uniforms={};for(const name of ['rect','camera','offset','viewport','new','small','detailMix','opacity'])uniforms[name]=gl.getUniformLocation(program,'u_'+name);
   gl.uniform1i(uniforms.new,0);gl.uniform1i(uniforms.small,1);
-  const originalTexture=texture(original),sceneTexture=gl.createTexture(),framebuffer=gl.createFramebuffer();
+  const originalTexture=texture(source),sceneTexture=gl.createTexture(),framebuffer=gl.createFramebuffer();
   gl.bindTexture(gl.TEXTURE_2D,sceneTexture);
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
@@ -129,6 +159,11 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
   gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
   let lost=false,bufferWidth=0,bufferHeight=0;canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;canvas.dispatchEvent(new Event('terrainlost'));});
   const drawOrder=['writing','music','games','films','work','thoughts','central','stuff'];
+  performance.mark('island-terrain-ready');
+  performance.measure('island-terrain-context-init','island-terrain-start','island-terrain-context');
+  performance.measure('island-terrain-hitmask','island-terrain-context','island-terrain-owners');
+  performance.measure('island-terrain-texture-prep','island-terrain-owners','island-terrain-textures');
+  performance.measure('island-terrain-shaders','island-terrain-textures','island-terrain-ready');
   let lastFrame=[];
   return {
     hitTest(x,y,morph,positions,shared){
@@ -137,7 +172,7 @@ window.createTerrainRenderer = async function(canvas, bodies, source, images) {
       const edge=y-shared+48*Math.sin(x*.012)+22*Math.sin(x*.029);
       if(morph<=0||(morph<1&&edge>morph*1400-90)){
         const px=Math.floor(x),py=Math.floor(y-shared),p=py*W+px;
-        return px>=0&&px<W&&py>=0&&py<H&&originalAlpha[p]>40?bodies[owners[p]].id:null;
+        return px>=0&&px<W&&py>=0&&py<H&&sourceVisible(p)?ownerAt(px,py):null;
       }
       for(let n=drawOrder.length-1;n>=0;n--){
         const i=bodies.findIndex(b=>b.id===drawOrder[n]),r=resources[i],[rx,ry,w,h]=r.rect,[dx,dy]=positions[i];

@@ -10,15 +10,15 @@ type IslandRuntime = Window & { mountIslandWorld?: (root: HTMLElement) => () => 
 let runtime: Promise<void> | undefined;
 function loadRuntime() {
   return runtime ??= (async () => {
-    for (const path of ["terrain-transition.js", "island-disassembly.js"]) {
-      await new Promise<void>((resolve, reject) => {
+    await Promise.all(["terrain-transition.js", "island-disassembly.js"].map(path =>
+      new Promise<void>((resolve, reject) => {
         const script = document.createElement("script");
         script.src = publicPath(`/world/${path}`);
         script.onload = () => resolve();
         script.onerror = () => { script.remove(); runtime = undefined; reject(new Error("世界加载失败")); };
         document.head.append(script);
-      });
-    }
+      })
+    ));
   })();
 }
 
@@ -58,7 +58,10 @@ export function ArchipelagoHome() {
         <div className="sky" aria-hidden="true" style={{backgroundImage: `url('${publicPath('/world/sky-v3.webp')}')`}}><div className="sky-night" style={{backgroundImage: `url('${publicPath('/world/sky-night-v3.webp')}')`}} /></div>
         <div className="hero-copy"><p className="eyebrow">你好，欢迎来坐坐</p><h1>杨逸凡<br />的世界</h1><p>我做过的，写过的，想过的，<br />以及还没做完的，都在这里。</p><p className="signature">保持好奇，持续探索。</p></div>
         <canvas id="terrain" className="world-art terrain" aria-hidden="true" />
-        <svg id="scene" className="world-art" viewBox="-25 -25 1360 1270" role="group" aria-label="悬停了解岛屿，点击走近；也可用 Tab 键选择" />
+        <svg id="scene" className="world-art" viewBox="-25 -25 1360 1270" role="group" aria-label="悬停了解岛屿，点击走近；也可用 Tab 键选择">
+          <g data-original=""><image href={publicPath("/world/island-complete-v4.webp")} width="1309" height="1201" /></g>
+          <g aria-hidden="true"><ellipse cx="650" cy="547" rx="86" ry="12" fill="#345837" opacity=".19"/><ellipse cx="806" cy="547" rx="61" ry="9" fill="#345837" opacity=".19"/><image href={publicPath("/world/yifan-cartoon-v2.webp")} x="480" y="206" width="350" height="350"/><image href={publicPath("/world/cat-cartoon.webp")} x="737" y="422" width="160" height="160"/></g>
+        </svg>
         <svg className="breeze-layer" aria-hidden="true" />
         <div className="scene-caption"><p>我的小小世界</p><h2>选一座岛，<br />一起走近看看。</h2></div>
         <aside id="island-hover" className="island-hover" role="tooltip" hidden>
